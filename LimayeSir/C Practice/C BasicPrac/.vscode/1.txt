@@ -1,0 +1,154 @@
+ What is Bioinformatics?
+Bioinformatics is an emerging branch of biological science that emerged from the combination of both biology and information technology. It is an interdisciplinary field of study that uses Biology, Chemistry, Mathematics, Statistics, and Computer Science that have merged to form a single discipline. This sector is mainly involved in analyzing biological data, and developing new software using biological tools.
+
+Use of IT for analysis of biological information.
+
+
+According to the NCBI- National Center for Biotechnology Information, the branch of NLM- National Library of Medicine and NIH- National Institutes of Health, Bioinformatics is defined as the analysis, collection, classification, manipulation, recovery, storage and visualization of all biological information using computation technology.
+
+The term Bioinformatics was first coined in the year 1960 by the two Dutch biologists named Paulien Hogeweg and Ben Hesper. According to their research and discoveries, Bioinformatics was defined as the study of information processes in biotic systems.
+
+
+Application of Bioinformatics
+Bioinformatics is mainly used to extract knowledge from biological data through the development of algorithms and software. Bioinformatics is widely applied in the examination of Genomics, Proteomics, 3D structure modelling of Proteins, Image analysis, Drug designing and a lot more. A significant application of bioinformatics can be found in the fields of precision and preventive medicines, which are mainly focused on developing measures to prevent, control and cure dreadful infectious diseases.
+
+The main aim of Bioinformatics is to increase the understanding of biological processes.
+
+
+Listed below are a few applications of Bioinformatics.
+
+In Gene therapy.
+In Evolutionary studies.
+In Microbial applications.
+In Prediction of Protein Structure.
+For the Storage and Retrieval of Data.
+In the field of medicine, used in the discovery of new drugs.
+In Biometrical Analysis for identification and access control for improvising crop management, crop production and pest control.
+
+ Biotechnology and its applications.
+
+ What is Gene therapy?
+Gene therapy is a technique which involves the replacement of defective genes with healthy ones in order to treat genetic disorders. It is an artificial method that introduces DNA into the cells of the human body. The first gene therapy was successfully accomplished in the year 1989.
+
+The simple process of gene therapy is shown in the figure below:
+
+Gene Therapy
+
+In the figure, the cell with the defective gene is injected with a normal gene which helps in the normal functioning of the cell. This technique is employed mainly to fight against the diseases in the human body and also to treat genetic disorders. The damaged proteins are replaced in the cell by the insertion of DNA into that cell. Generally, improper protein production in the cell leads to diseases. These diseases are treated using a gene therapy technique. For example, cancer cells contain faulty cells which are different from the normal cells and have defective proteins. Hence, if these proteins are not replaced, this disease would prove to be fatal.
+
+Types of Gene Therapy
+Basically, there are two types of gene therapy
+
+Somatic Gene Therapy
+This type usually occurs in the somatic cells of human body. This is related to a single person and the only person who has the damaged cells will be replaced with healthy cells. In this method, therapeutic genes are transferred into the somatic cells or the stem cells of the human body. This technique is considered as the best and safest method of gene therapy.
+
+Germline Gene Therapy
+It occurs in the germline cells of the human body. Generally, this method is adopted to treat the genetic, disease causing-variations of genes which are passed from the parents to their children. The process involves introducing a healthy DNA into the cells responsible for producing reproductive cells, eggs or sperms. Germline gene therapy is not legal in many places as the risks outweigh the rewards.
+
+Application of Gene Therapy
+It is used in the replacement of genes that cause medical ill-health
+The method generally destroys the problem causing genes
+It helps the body to fight against diseases by adding genes to the human body
+This method is employed to treat diseases such as cancer, ADA deficiency, cystic fibrosis, etc.
+
+
+
+
+
+
+
+ Biotechnology is defined as the broad area of biology which uses both the technology and the application of living organisms and their components to develop, modify and to produce a useful product for human welfare. The term ‘Biotechnology’ was coined in the year 1919 by an agricultural engineer Karoly Ereky, hence he is called as the father of Biotechnology.
+
+Let us have a look at some of the important applications of Biotechnology.
+
+Applications of Biotechnology
+Biotechnology is widely used in different fields to modify and produce a useful product for human benefits. These applications include:
+
+Applications of Biotechnology in Agriculture
+The application of Biotechnology in the field of agriculture is known as Green Biotechnology or Green Revolution. Biotechnology has contributed a lot to the field of agriculture and they include:
+
+Organic agriculture
+Agro-chemical based agriculture
+Genetically engineered crop-based agriculture.
+The application of Biotechnology has tripled the yield and the food supply. Apart from the regular crop production, pest-resistant plants and genetically modified crops are introduced to increase food production and to feed the growing human population.
+
+Genetically modified crops have their genes altered by inserting the genes with desired characteristics. Bt cotton, BT brinjal, golden rice are a few examples of Genetically modified crops.
+
+Applications of Biotechnology in Medicine
+The recombinant DNA technology has added to the advancements in the field of healthcare by permitting mass production of safe and more effective therapeutic drugs.
+
+The drugs are mainly produced by the process of genetic engineering. Humulin, the genetically modified insulin, is used to treat diabetes is produced through genetic engineering.
+
+Biotechnology has developed gene therapy which helps in the removal of the genetic disorders in the embryo. Other applications of Biotechnology in the field of medicines and molecular diagnosis include:
+DNA recombinant technology
+ELISA
+PCR
+
+
+Transgenic Animals
+Transgenic animals can be defined as those animals in which a new or altered gene has been experimentally inserted into the genome by genetic engineering technique.
+
+Few examples of transgenic animals are rats, rabbits, pigs, sheep, cows, fish, etc. Among all other transgenic animals, the mouse is the existing transgenic animal.
+
+The main aim behind the creation of transgenic animals are:
+
+For the production of Biological products.
+To study the different types of diseases.
+To study the contribution of genes in the development of the disease.
+For testing the safety of vaccines and toxicity of drugs before they are used on humans.
+To study how genes are regulated and how do they affect the normal functioning of the body and its development.
+
+
+
+Applications in Aquaculture
+Biotechnology applications help in the improvement of quality and quantity of fish. The gonadotropin-releasing hormone is introduced into the fish to enhance breeding. This helps in enhancing growth and improving their genetic characteristics. It also prevents a number of diseases.
+
+Production of Antibiotics
+Biotechnology helps in the production of vaccines, antibiotics and artificial hormones, using plants. Genes with desired characteristics are introduced into the plants to manufacture the encoded proteins. Edible vaccines are cost-effective, can be easily stored and administered in the body. These are used to cure diseases such as measles, hepatitis, cholera, etc.
+
+
+
+- What are Bt Crops?
+“Bt crops are transgenic crops that are genetically engineered from the DNA of bacterium Bacillus thuringiensis.”
+
+Bt Crops are transgenic crops that produce the same toxin as the bacterium Bacillus thuringiensis in the plant cell, thereby, protecting the crops from pests. The bacterium secretes specific proteins known as “cry proteins” that are toxic to insects. A few of the Bt crops include cotton, brinjal, corn, etc.
+
+When an insect feeds on the transgenic plants, the toxic cry protein present in the plants crystallizes the digestive system of insects, eventually leading to its death. However, it has no harmful effects on the human digestive system.
+
+BT CROPS
+
+Bacillus thuringiensis
+Bacillus thuringiensis is a gram-positive, spore-forming bacteria which is mainly found in the soil. As stated above, it produces proteins that are toxic to insects. Organic farmers use this bacterium in a solution and spray it on the plants to protect them from pests.
+
+The practice of using Bacillus thuringiensis began in the year 1996 with small quantities of genes from the bacterium. This facilitated the production of cry proteins in plant cells that helped to kill pests. Pests like European and southwestern corn borer, tobacco and cotton budworm, pink bollworm and Colorado potato beetle largely destroyed the crop yields. Bacillus thuringiensis protected the crops against such pests.
+
+Also Read: Genetically Modified Organisms
+
+Types of Bt crops
+The following types of Bt crops were produced by the researchers:
+
+Bt Cotton
+The Bt cotton variety is genetically transformed with the Bt gene to protect the plants from bollworm, a major pest of cotton. The worms present on the leaves of Bt cotton become lethargic and sleepy and thus, cause less damage to the plants. When the worms consume the plant, the toxic proteins produced by the crops are ingested, thereby, killing them.
+
+Bt Brinjal
+Bt brinjal is also produced by genetic transformation of a crystal protein gene cry 1 Ac from the bacterium Bacillus thuringiensis. Bt brinjal was developed to provide resistance against lepidopteron insects. The proteins produced by Bt genes bind to the receptors present on the insect’s membrane, resulting in the formation of pores on the membranes. This disrupts the digestive process and leads to the death of the insect.
+
+BT CROPS
+
+Advantages of Bt Crops
+Following are the major advantages of Bt crops:
+
+It helps in improving the crop yield, thereby, raising the farmer’s income. This results in increased farm production.
+They help in controlling soil pollution as the use of synthetic pesticides is reduced.
+Bt crops help in protecting beneficial insects.
+It can easily feed an increasing population due to increased yields in a short time.
+It leads to the production of disease-free crops owing to the reduction of pesticides.
+It leads to more productivity in a small area of land.
+
+
+Disadvantages of Bt Crops
+Bt crops have a few disadvantages as well:
+
+Bt crops are costlier than naturally grown crops.
+It can disrupt the natural process of gene flow.
+The pests might become resistant to the toxins produced by these crops and the crop production might decline.

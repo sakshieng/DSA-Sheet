@@ -1,0 +1,29 @@
+___________________GRAPHS_______________________
+
+Graph is a set of pairs of V,E  it is non-linear DS has edges and vertices
+-->Cycle: a path where the starting point and endpoint are the same vertex
+V-vertices/nodes
+E-edges
+Three types -->
+1.Directed
+{
+    u->v or v->u
+    either one of them two-way relationship
+    Indegree-no of edges pointing towards reference node 
+    Outdegree-no of edges pointing away from reference node
+}
+2.Undirected
+{
+    v<->u 
+    Degree-no of edges connecting to a node
+}
+3.Weighted
+{
+    void addEdge(vector <pair<int, int> > adj[], int u,
+                                     int v, int wt)
+{
+    adj[u].push_back(make_pair(v, wt));
+    adj[v].push_back(make_pair(u, wt));
+}
+}
+Total degree of graph=no of edges*2

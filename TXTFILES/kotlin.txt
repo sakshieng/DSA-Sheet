@@ -1,0 +1,126 @@
+kotlin is statically tyed language we are using it as primary development language for android
+// fun main() {
+//     val num=1
+//     if(num<4)
+//     {
+// 		println("u are lucky")
+//     }
+//     else if(num==5)
+//     {
+//         println("u are perfect")
+//     }
+//     else
+//     {
+//         println("i am lazy")
+//     }
+// 	val num=1
+//     when(num)
+//     {
+// 1->{
+//     println("num is 1")
+// }
+// 2->{
+//     println("num is 2")
+// }
+// else ->
+//         {
+//             println("something else")
+//         }
+//     }
+//     val arr=arrayOf(1,2,3,4,5)
+//     for(i in arr)
+//     {
+// 		print("$i ") 
+//     }
+//     println()
+//     for(num in 0..4)
+//     {
+//         print("${arr[num]} ")
+//     }
+//     println()
+//     for(n in arr)
+//     {
+// 		print(arr[n-1] )
+//         print(" ")
+//     }
+//     println()
+//     for(i in 5 downTo 1)
+//     {
+// 		print(i)
+//         print(" ")
+//     }
+// 	 var i=downTo()
+//     do{
+//         print("$i")
+//         i++
+//     }while(i<10)
+//     print(" ")
+// }
+// 	fun main()
+// {
+//     greet()
+// }
+// fun greet(name:String)
+// {
+//     println("heelo $name")
+// }
+// fun greet()
+// {
+//     println("Hello")
+// }
+// fun main()
+// {
+//     val sum=add(2,3)
+//     println(sum)
+// }
+// for add(a:Int,b: Int) :Int{
+//     return a+b
+// }
+// 	fun main()
+// {
+//     val printMessage={message: String->
+//         print(message)
+//     }
+//     val msg=printMessage("HI")
+//     println(msg)
+// }
+//  fun main()
+// {
+//     var s1=student()
+//     s1.name="Rao"
+//     s1.rollNum="110"
+//     print(s1.name+" "+s1.rollNum)
+// }
+// class student{
+//     var name:String="abhijeet"
+//     var phoneNum:String="9822798400"
+//     var rollNum:String="35"
+// }
+// 	fun main() {
+//  val obj=MyPhone()
+//  obj.call()
+// }
+// abstract class Phone
+// {
+//     abstract fun call()
+// }
+// class MyPhone:Phone()
+// {
+//         override fun call(){
+//             print("hello")
+//     }
+// }
+// compile-time polymorphism-->func override and func overloading
+// interface MyInterface{
+    
+//     }
+//     abstract class phone
+// {
+//     abstract fun call()
+// }
+// model class is type of data class->data storage
+
+composable func
+text composable
+bash script
+web scrapping

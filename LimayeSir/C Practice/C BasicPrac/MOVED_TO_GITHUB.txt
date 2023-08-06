@@ -1,0 +1,1 @@
+Project management for GNUSim8085 has moved to github.com. Please download the latest release from https://gnusim8085.github.io/

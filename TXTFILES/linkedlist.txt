@@ -1,0 +1,423 @@
+//recursive factorial
+
+algorithm factorial
+finds the factorial of given number
+
+pre : a number n
+post : returns the factorial of that number 
+
+1. if(n is 0) return 1
+2. else return n*factorial(n-1)
+end if
+end factorial
+
+
+//iterative factorial
+
+algorithm factorial
+finds the factorial of given number
+
+pre : a number n
+post : returns the factorial of that number 
+
+1.set i = 1
+2.set fact = 1
+3.loop(i <= n)
+    3.1 set fact = fact*i;
+    3.2 increment i
+4.end loop 
+5.return fact
+end factorial
+
+//Ackermann function
+
+algorithm ack
+finds the magical value of given two numbers
+pre :  two numbers m,n
+post : returns Ackermann value of the given two numbers
+
+1. if m = 0 return ack(m,n) = n+1
+2. if n = 0 and m != 0 return ack(m,n) = ack(m-1,1)
+3. if n != 0 and m != 0 return ack(m,n) = ack(m-1,ack(m,n-1))
+end ack
+
+//fibonicci series
+algorithm fibo
+finds fibonicci series sum upto n numbers
+
+pre : a number n
+post : returns fibonicci sum of n numbers
+1. if (n is less than or equal 1) return n
+2. else return fibo(n-1) + fibo(n-2)
+end if
+end fibo
+
+//Tower of hanoi (n ,source, dest, auxi)
+algorithm ToH
+Recursively move disks from source to destination
+
+Pre : n is number of disks to be moved, source, dest ,auxi towers given
+post : steps for moves are printed
+1.print("Towers:",n,source,dest,auxi)
+2.if(n = 1)
+    2.1 print("move from" ,source ,"to" ,dest)
+3.ToH(n-1,source,auxi,dest)
+4.print("move from" ,source ,"to" ,dest)
+5.ToH(n-1,auxi,dest,source)
+end ToH
+
+
+//Linked List
+
+#Creating linked list...
+
+algorithm createList
+initializes metadata structure - linkedList
+pre: nothing
+post: creates metadata structure
+
+1.allocate(list) 
+2.set list link as NULL
+3.set data as 0
+end createList  
+
+
+#inserting at beginning
+
+algorithm insertBegin
+inserts an element at the beginning of the metadata structure
+
+pre:head is head of the linkedList, newData is data of new node              
+post: elment is inserted at the beginning
+
+1.create newNode
+2.set newNode link to head
+3.set newNode data to newData
+4.set head as newNode
+5.return head 
+end insertBegin
+
+
+#inserting at end
+
+algorithm insertEnd
+inserts an element at the end of the metadata structure
+pre: head, is head of the linkedList , newData data to be inserted
+post:elment is inserted at the end
+
+1.create curr
+2.set curr to head
+3.loop while(curr link != NULL)
+    3.1 set curr to curr's next
+4.end loop
+5.create newNode
+6.set newNode data as newData
+7.set newNode's link as NULL
+8.set curr's link as newNode
+9.return head
+end insertEnd
+
+#inserting after a given node
+
+algorithm insertAfter
+inserts an element after the given node of the metadata structure
+pre: head is head of the linkedList, newData is data to be inserted , pnode, node after whic new node has to be inserted
+post::elment is inserted after the given node
+
+1.create curr
+2 set curr to head  
+3.loop while(curr != pnode)
+    3.1 set curr = curr's next
+4.end loop
+5.create newNode
+6.set newNode data as newData
+7.newNode's next = curr's next
+8.curr'next = newNode
+9.return head
+end insertAfter
+
+#deleting a node
+
+algorithm delete
+deletes a node of given metadata structure
+pre:head is head of linkedList,
+post:given node is successfullly deleted
+
+1.create curr
+2.set curr to head
+3.loop while(curr !=)
+
+
+#inserting an element into a sorted list
+
+algorithm insertSOrt
+inserts an element into a sorted list 
+pre:sorted metadata structure-linked list,last node of list  
+post:given node is inserted in sorted List
+
+1.create curr
+2.set curr to head
+3.if(head = NULL) return 
+4.if(curr<last[])
+
+
+//Stack
+operations => 1)push 2)pop 3)top 4)isEmpty 5)isFull
+
+    [][][][][][][]
+                 1    
+
+algorithm push
+pushes an element in stack
+pre : stack a meta data structure , newData the data which is to be pushed
+post: true if data is successfullly inserted else stack overflow
+
+1. if (top = max-1) print("Stack overflow")
+2.else
+    2.1 top = top+1
+    2.2 arr[top] = newData;
+3.end if
+end push
+
+algorithm pop
+pops the top element out of stack
+pre : stack a meta data structure 
+post: true if data is successfullly popped else stack underflow
+
+1. if (top = -1) print("Stack underflow")
+2.else
+    2.1 top = top-1
+3.end if
+end pop
+
+algorithm isFull
+checks if stack is full
+pre : stack a meta data structure 
+post: true if stack is full else false
+
+1. return true if top = max-1
+2. else return false
+end isFull
+
+algorithm isEmpty
+checks if stack is empty
+pre : stack a meta data structure 
+post: true if stack is empty else false
+
+1. return true if top = -1
+2. else return false
+end isEmpty
+
+algorithm peek
+check and prints the top element of the meta data structure
+pre: stack, a meta data structure
+post: returns the top element of the stack
+
+1.if top = -1 print("no element to peek")
+2.else return arr[top];
+end if
+end peek
+
+
+#postFix evaluation
+algorithm postfixEval
+evaluates the postfix value and returns it
+pre: posfix expression
+post: returns evaluated value
+
+1.set i = 0
+2.loop(i < string size)
+    2.1 if an operand is encountered push it into the stack
+    2.2 else
+        2.2.1 pop the last 2 operands from the stack
+        2.2.2 perform the operation using the given operator
+        2.2.3 push the result into the stack
+    end if
+3.end loop
+4.set value to top of the stack
+5.return value
+6.End postfixEval
+
+#infix to postfix conversion
+
+algorithm polish(Q,P)
+converts an infix expression to a postfix expression
+Q: arithmatic expression which has infix notation
+P: arithmatic expression which has postfix notation
+pre: a string Q containing the infix expression
+post: returns a string P containing postfix expression
+
+1.loop( until Q is empty)
+    1.1 if an operand is encountered add it to P
+    1.2 else if '(' is encountered push it into the stack
+    1.3 else if ')' is encountered pop all the elements add it to P until '(' is found
+        [do not add '(' or ')' to P]
+    1.4 else if operator is encountered pop all the operators having high or equal priority 
+        and add it to P until lower priority operator is found
+    end if
+end loop
+2. return P
+end polish(Q,P)
+
+
+#queue
+
+rear => insertAfter
+front =>delete
+[] [] [] [] [] [] [] [] [] []
+ |                          |      
+front                     rear
+
+
+algorithm enqueue
+inserts an element in the queue
+pre: queue - a meta deta structure, newData - data to be inserted
+post: true if data is successfullly inserted else overflow
+
+1. if(rear = max - 1) print("overflow")
+2. if(front = rear = -1) front = rear = 0
+3. else
+    2.1 rear = rear + 1
+end if
+4.arr[rear] = newData
+end enqueue
+
+algorithm dequeue
+deletes an element from the queue
+pre: queue - a meta deta structure
+post: true if data is successfullly inserted else overflow
+
+1. if(front = -1 or front= rear+1) print("underflow")
+2. else set val = arr[front]
+end if
+3. if(front = rear) front = rear = -1
+4. else
+    4.1 front = front - 1 
+end if
+end dequeue
+
+
+#deque
+
+algorithm insertFront
+inserts element to the front of the deque
+pre: deque, max , newData, front , rear
+post: element is added to inserted to the front
+
+1. if(front = 0 and rear = max-1 or front = rear + 1) print("OverFlow)
+2. else
+    2.1 if(front = rear = -1) front = rear = 0
+    2.3 if(front = 0) front = max-1
+    2.4 else front = front - 1
+    end if
+end if
+deque[front] = newData
+end insertFront
+
+algorithm insertRear
+inserts element to the rear of the deque
+pre: deque, max , newData, front , rear
+post: element is added to inserted to the rear
+
+1. if(front = 0 and rear = max-1 or front = rear + 1) print("OverFlow")
+2. else
+    2.1 if(front = rear = -1) front = rear = 0
+    2.3 if(rear = max-1) rear = 0
+    2.4 else rear = rear + 1
+    end if
+end if
+deque[rear] = newData
+end insertRear
+
+algorithm deleteFront
+deletes the element from the front of the deque
+pre: deque, max , newData, front , rear
+post: element is deleted from the front
+
+1. if(front = rear = -1) print("underFlow)
+2.set val = deque[front]
+3.if (front = rear) front = rear = -1
+4.else if(front = max -1) front = 0
+5.else front = front + 1
+end if
+end deleteFront
+
+algorithm deleteRear
+deletes the element from the rear of the deque
+pre: deque, max , newData, front , rear
+post: element is deleted from the rear
+
+1. if(front = rear = -1) print("underFlow")
+2.set val = deque[rear]
+3.if (front = rear) front = rear = -1
+4.else if(rear = 0) rear = max-1
+5.else rear = rear -1 
+end if
+end deleteRear
+
+#queue using linkedList
+algorithm enqueue
+inserts an element to the rear of the  queue using linkedList
+pre: queue - metadata structure , newData - data to be inserted
+post : Data is successfullly inserted 
+
+1.create node temp
+2.set temp data to newData
+3.if(rear = NULL) front = rear = temp
+4.else 
+    4.1 rear[link] = temp
+    4.2 rear = temp
+end if
+end enqueue
+
+algorithm dequeue
+deletes an element from the front of the  queue using linkedList
+pre: queue - metadata structure , newData - data to be inserted
+post : Data is successfullly deleted
+
+1.if(front = NULL) print("underFlow")
+2.else 
+    2.1 set temp = front
+    2.2 front = front[link] 
+end if
+3.if(front = NULL) rear = NULL
+end if
+end dequeue
+
+
+#stack using linkedList
+
+algorithm push
+inserts new element to the top of the stack
+pre: stack - a metadata structure ,  newData - data to be inserted
+post: data is successfullly inserted at top of the stack
+1.create node temp
+2.set temp data to newData
+3.set temp[link] to top
+4.set top to temp
+
+algorithm pop
+deletes the top of the stack
+pre: stack - a metadata structure
+post: data is successfullly deleted from the top of the stack
+1.create node temp
+2.if(top = NULL) print("stack underFlow")
+3.else
+    3.1 temp = top
+    3.2 top = top[link]
+4.end if
+end pop
+
+algorithm isEmpty
+checks if stack is empty or not
+pre: stack - a metadata structure
+post: return true if stack is empty else return false
+
+1. if(top = NULL) return true;
+2. else return false;
+end if
+end isEmpty
+
+
+
+ARQ is an error-control strategy used in a two-way communication system. It is a group of error-control protocols to achieve reliable data transmission over an unreliable source or service. 
