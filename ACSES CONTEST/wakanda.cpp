@@ -7,6 +7,21 @@ const int MOD = 1e9 + 7;
 
 #include <bits/stdc++.h>
 using namespace std;
+//senior's method
+void solve(){
+    ll n, x;
+	cin >> n >> x;
+	ll arr[n];
+	for(ll i = 0; i < n; i++) cin >> arr[i];
+	sort(arr, arr + n);
+	ll ans = 0;
+	for(ll i = 1; i <= n; i++) {
+		if(i % 3 == 0 && i != n) ans += (arr[i - 1] + arr[i - 2] + arr[i - 3]);
+		ans += arr[i - 1];
+	}
+	if(ans <= x * 24) cout << "YES" << endl;
+	else cout << "NO" << endl;
+}
 int main()
 {
 long long t; 

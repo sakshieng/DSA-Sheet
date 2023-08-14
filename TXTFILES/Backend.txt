@@ -177,5 +177,3 @@ git stash-->put current changes from ur working directory into stash for later u
 git stash pop-->apply stored stash content into working directory and clears stash
 
 git stash drop-->delete a specific stash from all ur previous stashes
-
-A shell is a program that acts as an interface between a user and the kernel

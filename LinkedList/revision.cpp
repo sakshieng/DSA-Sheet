@@ -20,16 +20,8 @@ public:
     void createNode(listNode *Next, int new_data);
     void insertAfter(listNode *head, listNode *node, int new_data);
     void reverse(listNode *head);
-    int getCount(listNode *head);
 };
-// finding length of LL recursively
-int listNode :: getCount(listNode *head)
-{
-    if(head == NULL)
-        return 0;
-    else
-        return 1+getCount(head->next);    
-}
+
 void listNode::createNode(listNode *Next, int new_data)
 {
     // method 1 using empty constructor

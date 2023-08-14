@@ -256,5 +256,3 @@ Low pass channel or medium with the bandwidth that starts from zero.
 
 Band pass channel has the bandwidth that does not start from zero.
 
-
-

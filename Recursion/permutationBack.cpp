@@ -14,6 +14,7 @@ void solve(int index, vector < int > & nums, vector < vector < int >> & ans) {
       for (int i = index; i < nums.size(); i++) {
         swap(nums[index], nums[i]);
         solve(index + 1, nums, ans);
+        //backtrack
         swap(nums[index], nums[i]);
       }
     }
