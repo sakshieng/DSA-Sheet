@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-/* Sakshi */
+//quick,merge and sort are comparison based algorithms
 using namespace std;
 // in i^th round i^th largest element will reach at right place
 void bubbleSort(int arr[],int n)

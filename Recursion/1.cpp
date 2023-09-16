@@ -13,8 +13,26 @@ void print(int n)
     print(n-1);
     cout<< n <<endl;        
 }
+void f1toN(int i,int n){
+    //tail recusrion
+    if(i > n) return;
+    f1toN(i+1,n);
+    cout<<i<<" ";
+}
+void Nto1(int i,int n){
+    //head recusrion
+    if(i > n) return;
+    cout<<i<<" ";
+    Nto1(i+1,n);
+}
 int main()
 {
-   print(5);
+   int i=1,n=10;
+   f1toN(i,n);
+   cout<<"\n";
+   Nto1(i,n);
+//    print(5);
    return 0;
 }
+//head recursion->recursion adhi then logic but when we dont writ base condn this rec fails
+//tail recursion->logic adhi then recur

@@ -1,4 +1,6 @@
 // https://www.codingninjas.com/codestudio/problems/frog-jump_3621012?leftPanelTab=1
+// https://leetcode.com/problems/frog-jump/description/
+//leetcode que is different check it out
 #include <bits/stdc++.h>
 using namespace std;
 // in this problem we have used concept of memiozation

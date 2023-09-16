@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+// https://www.codingninjas.com/studio/problems/longest-increasing-subsequence_630459?source=youtube&campaign=striver_dp_videos
+//check binary search approach
 // https://leetcode.com/problems/longest-increasing-subsequence/
 class Solution {
 public:

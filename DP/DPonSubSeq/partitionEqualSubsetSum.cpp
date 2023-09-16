@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-// https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/
-
+// https://www.codingninjas.com/studio/problems/partition-equal-subset-sum_892980
+// https://leetcode.com/problems/partition-equal-subset-sum/description/
 // divide into exactly 2 subsets such that sum1=sum2 totalSum/2 = subset sum
 // same problem subset sum equals target
 

@@ -1,5 +1,5 @@
 //we cant use binary search as we dont know numbers are arranged in sorted order
-//so we will use hashmap
+//so we will use hashmap and doubly-LL
 //no of hashes == no of pages 
 //key value of the page and value is storing value of that node 
 //when we are removing the cache we are updating the cache
@@ -7,8 +7,8 @@
 //searching for the page requested and required shifting is donein O(1) time
 //time for query = O(1)+O(1)
 #include<bits/stdc++.h>
-            //as in doubly ended list we have to insert the pair which we are storing in hash
-            //the case is we are not found the elmt so we are erasing any key present from ll and updating the hash by erasing key 
+//as in doubly ended list we have to insert the pair which we are storing in hash
+//the case is we are not found the elmt so we are erasing any key present from ll and updating the hash by erasing key 
 
 using namespace std;
 class LRUCache

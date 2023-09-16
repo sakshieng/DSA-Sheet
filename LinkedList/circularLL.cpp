@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-/* Sakshi */
 using namespace std;
 // Circular Linked List
 class node
@@ -19,9 +18,4 @@ node *node::to_empty(node *head,int new_data)
     newNode->data=new_data;
     head=newNode;
     
-}
-int main()
-{
-   
-   return 0;
 }

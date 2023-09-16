@@ -21,7 +21,7 @@ struct Node
     }
     Node *get(char ch)
     {
-        return links[ch - 'a'];
+        return links[ch - 'a'];//gives trie of ch-'a'
     }
     bool setEnd()
     {

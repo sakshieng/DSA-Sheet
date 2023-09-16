@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 // multisource bfs + dijkistra
+// https://leetcode.com/problems/find-the-safest-path-in-a-grid/
 class Solution
 {
 public:

@@ -119,6 +119,52 @@ buy bigger machines → vertical scaling
 
 buy more machines → horizontal scaling
 
+
+________________________BASICS OF Backend____________________
+
+->MVC architecture
+server create routes create controllers create test routes,controllers,API for that exceptions we have to set middlewares database connect task-schema create moodles mdhe import krychet m,c,r,m app mdhe call krychet frontend add krychet
+
+diffrenece
+browser side js :-> DOM features like queryselector Window Interactive apps No filesystem Fragmentation ES6 modules
+
+Node.js :->
+
+It is runtime environment
+Framework(a set of tools which guides us to to develop a piece of code) like Express uses Node runtime environment No DOM No geolocation No window objects Server side apps Filesysytem version MVC architecture CommonJS,every file is module(by module) only logic without graphical interface
+
+Intro to Node.js and Express.js
+->modules means encapsulated code(only share minimum) some built-in modules are-> OS Path FileSystem HTTP
+
+{
+
+Common server responses:
+200 OK -
+the request was successful (some API calls may return 201 instead).
+
+204 No Content -
+the request was successful but there is no representation to return (i.e. the response is empty).
+
+401 Unauthorized -
+authentication failed or user doesn't have permissions for requested operation.
+
+403 Forbidden -
+access denied.
+
+404 Not Found -
+resource was not found.
+
+422 Unprocessable Entity -
+requested data contain invalid values.
+
+->All requests must be sent over HTTPS protocol<- } { -->Express application can use the following types of middleware:
+
+1.Application-level middleware 2.Router-level middleware 3.Error-handling middleware 4.Built-in middleware 5.Third-party middleware
+
+}
+________________________
+
+
 <-------------------The ultimate git cheatsheet--------------->
 
 git init->initializing an existing directory as a Git repository

@@ -6,7 +6,7 @@
 // corner hence j=0 in both cases
 // segmentation fault nko mhnun dp=s2.sizeof()+1
 #include <bits/stdc++.h>
-/* Sakshi */
+//https://leetcode.com/problems/interleaving-string/
 using namespace std;
 // 2D VECTOR
 int main()
@@ -36,3 +36,27 @@ int main()
   };
   return 0;
 }
+//updated one 
+/*
+class Solution {
+public:
+vector<vector<int>>dp;
+//bottom-up
+bool memo(string &s1, string &s2, string &s3,int i,int j,int k){
+    int n=s1.size(),m=s2.size(),o=s3.size();
+    if(i>=n && j>=m && k>=o) return 1;
+    if(k>=o) return 0;
+    if(dp[i][j] != -1) return dp[i][j];
+    if(i<n && s1[i]==s3[k]) {
+        if(j<m && s2[j]==s3[k]) return dp[i][j] = memo(s1,s2,s3,i+1,j,k+1) || memo(s1,s2,s3,i,j+1,k+1);
+        return dp[i][j] =memo(s1,s2,s3,i+1,j,k+1);
+    }
+    if(j<m && s2[j]==s3[k]) return dp[i][j]=memo(s1,s2,s3,i,j+1,k+1);
+    return dp[i][j] = 0;
+}
+    bool isInterleave(string s1, string s2, string s3) {
+        dp.resize(s1.size()+101,vector<int>(s2.size()+101,-1));
+        return memo(s1,s2,s3,0,0,0);
+    }
+};
+*/
