@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-// sakshi codes here
 using namespace std;
 // https://www.codechef.com/problems/GCDQ
 int main()

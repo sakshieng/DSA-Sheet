@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+//dp+merge interval
 // https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/description/
 class Solution {
 public:

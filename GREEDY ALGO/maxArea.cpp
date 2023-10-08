@@ -15,11 +15,8 @@ int main()
             verticalCuts.push_back(w);
             sort(horizontalCuts.begin(), horizontalCuts.end());
             sort(verticalCuts.begin(), verticalCuts.end());
-            long long int i = 0;
-            long long int j = 0;
-            long long int leng = horizontalCuts[0];
-            long long int val;
-            long long int wid = verticalCuts[0];
+            long long int i = 0, j = 0,val;
+            long long int leng = horizontalCuts[0], wid = verticalCuts[0];
             int m = horizontalCuts.size();
             int n = verticalCuts.size();
             for (i = 0; i < m - 1; i++)

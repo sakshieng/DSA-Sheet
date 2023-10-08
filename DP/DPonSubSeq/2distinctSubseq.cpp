@@ -1,7 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+// https://practice.geeksforgeeks.org/problems/number-of-distinct-subsequences0909/1
 // https://leetcode.com/problems/distinct-subsequences-ii/description/
+//checkout leetcode easy soln is there
+//last line for result in that soln is for assuring the final result is +ve
 class Solution {
 public:
     int distinctSubseqII(string s) {

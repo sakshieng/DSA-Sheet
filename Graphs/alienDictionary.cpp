@@ -27,7 +27,7 @@ class Solution{
 			q.pop();
 			topo.push_back(node);
 			// node is in your topo sort
-			// so please remove it from the indegree
+			// so remove it from the indegree
 
 			for (auto it : adj[node]) {
 				indegree[it]--;
@@ -46,7 +46,7 @@ class Solution{
         //i need to comapre every character
         int len = min(s1.size(),s2.size());
         for(int ptr=0;ptr<len;++ptr){
-            if(s1[ptr] != s2[ptr]){
+            if(s1[ptr] != s2[ptr]){//means lexographically smaller to higher edge add to graph
                 adj[s1[ptr]-'a'].push_back(s2[ptr]-'a');
                 break;
             }
@@ -60,13 +60,16 @@ class Solution{
     }
     return ans;
     }
-
+    //when the order is not possible 
+    // 1.larger string is before smaller cycle 
+    // 2.cyclic dependency 
 };
 string order;
 bool f(string a, string b) {
     int p1 = 0;
     int p2 = 0;
-    for (int i = 0; i < min(a.size(), b.size()) and p1 == p2; i++) {
+    int len = min(a.size(), b.size());
+    for (int i = 0; i < len and p1 == p2; i++) {
         p1 = order.find(a[i]);
         p2 = order.find(b[i]);
         //	cout<<p1<<" "<<p2<<endl;

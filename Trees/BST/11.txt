@@ -19,3 +19,10 @@ Tree is a special type of graphs
 6
 
 For a binary search tree (BST) the inorder traversal is always in ascending order
+
+{
+    A tree is an undirected, connected and acyclic graph it does not contain even a single cycle
+}
+{
+    A forest is an undirected, disconnected, acyclic graph i.e. tree is a disjoint collection of trees
+}

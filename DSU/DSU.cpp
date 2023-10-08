@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-//𝕊𝕒𝕜𝕤𝕙𝕚 ℂ𝕠𝕕𝕖𝕤 𝕙𝕖𝕣𝕖
+//DSU are used in dynamic graphs
 using namespace std;
 const int N = 1e9+7;
 int parent[N];

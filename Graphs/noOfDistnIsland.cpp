@@ -5,9 +5,7 @@ list {(0,0)(0,1)(1,0)}
 list ordering for evry vertex will be same
 */
 //https://practice.geeksforgeeks.org/problems/number-of-distinct-islands/1
-
-//{ Driver Code Starts
-// Initial Template for C++
+// https://www.codingninjas.com/studio/problems/distinct-island_630460?leftPanelTab=0
 #include <bits/stdc++.h>
 using namespace std;
 
