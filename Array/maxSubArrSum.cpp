@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
+// kadanes algorithm
 // https://www.codingninjas.com/studio/problems/maximum-subarray-sum_628288?leftPanelTab=0
+// https://leetcode.com/problems/maximum-subarray/description/
 long long maxSubarraySum(int arr[], int n)
 {
     long long maxi = 0;

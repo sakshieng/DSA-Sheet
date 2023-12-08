@@ -16,7 +16,7 @@ int main()
     for(int i=n-1;i>=0;i--)
     {
     while(!st.empty() && st.top()>=a[i]) st.pop(); 
-        if(st.empty()) NSR.push_back(-1);
+        if(st.empty()) NSR.push_back(n);
         else NSR.push_back(st.top());
         st.push(a[i]);
     }

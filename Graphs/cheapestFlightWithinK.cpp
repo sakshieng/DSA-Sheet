@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-// sakshi codes here
+//https://leetcode.com/problems/cheapest-flights-within-k-stops/
 using namespace std;
 
 class Solution
@@ -28,7 +28,7 @@ public:
     }
 };
 /*
-Djikstra algo fali for negative edge
+Djikstra algo fail for negative edge
 
 Bellman ford algo work for directed graph both for +ve/-ve edge and fails only if there is negative cycle but it will detect negative cycle
 Relax all the edges (n-1) times

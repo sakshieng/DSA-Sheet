@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
-//sakshi codes here
+//https://leetcode.com/problems/maximal-rectangle/description/
+
 using namespace std;
 class Solution {
 public:

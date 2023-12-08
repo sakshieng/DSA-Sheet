@@ -9,7 +9,7 @@ public:
 		for (auto it : prerequisites) {
 			adj[it[1]].push_back(it[0]);
 		}
-// 		vector<int>indegree(V);
+		//vector<int>indegree(V);
 		int indegree[V];
         for(int i=0;i<V;++i) indegree[i] = 0;
 		for (int i = 0; i < V; i++) {

@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+//https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/description/?envType=daily-question&envId=2023-12-02
+using namespace std;
+
+class Solution {
+public:
+    int countCharacters(vector<string>& words, string chars) {
+        int ans = 0;
+        map<char, int> ss;
+        for(int i = 0; i < chars.length(); i++)
+            ss[chars[i]]++;
+        for(int i = 0; i < words.size(); i++)
+        {
+            int count = 0;
+            map<char, int> mp = ss;
+            for(int j = 0; j < words[i].length(); j++)
+            {
+                if((mp.find(words[i][j]) != mp.end()) && mp[words[i][j]] != 0){
+                    mp[words[i][j]]--;
+                    count++;
+                }      
+            }
+            if(count == words[i].length())
+                ans += count;
+        }
+        return ans;
+    }
+};

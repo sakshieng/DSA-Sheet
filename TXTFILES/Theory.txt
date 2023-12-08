@@ -9,7 +9,19 @@ There are several algorithms in DS few of them are:
 8.Greedy
 9.Dynamic Programming
 10.Randomized
-
+{
+int main(){
+    int n = 100;
+    int *p = &n;
+    int &m = *p;
+    cout<<n<<m<<*p;
+    int k=5;
+    p=&k;
+    k=200;
+    cout<<n<<m<<*p;
+    return 0;
+}
+}
 x!=0
 if(x)
 

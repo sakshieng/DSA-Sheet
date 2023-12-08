@@ -7,6 +7,7 @@
 //searching for the page requested and required shifting is donein O(1) time
 //time for query = O(1)+O(1)
 #include<bits/stdc++.h>
+//check soln easy
 //as in doubly ended list we have to insert the pair which we are storing in hash
 //the case is we are not found the elmt so we are erasing any key present from ll and updating the hash by erasing key 
 

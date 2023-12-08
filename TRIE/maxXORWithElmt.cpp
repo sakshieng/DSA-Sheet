@@ -76,7 +76,7 @@ vector<int> maxXorQueries(vector<int> &arr, vector<vector<int>> &queries){
 	vector<pair<int, pair<int,int>>>oQ;//offlineQuries
 	int q = queries.size();
 	for(int i=0;i<q;++i){
-		//ai,{xi,i}
+		//ai,{xi,i}c:\Users\saksh\CP\maxStrongPairXOR2.cpp
 		oQ.push_back({queries[i][1],{queries[i][0],i}});
 	}
 	//queries are sorted in terms of ai

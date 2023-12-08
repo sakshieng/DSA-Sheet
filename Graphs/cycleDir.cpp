@@ -1,4 +1,4 @@
-// if we visit the adjacent node which is not a parent if it is aleady vis then it is cycle for undirected ut holds true
+// if we visit the adjacent node which is not a parent if it is already vis then it is cycle for undirected ut holds true
 // for dir graph for the same path the node should be vis again
 // when vis=1 and path visited=1 la parat visit krto tevha cycle
 #include <bits/stdc++.h>

@@ -4,7 +4,7 @@ using namespace std;
 class Solution
 {
 public:
-  void solve(int i, int j, vector<vector<int>> &a, int n, vector<string> &ans, string move,vector<vector<int>> &vis, int di[], int dj[])
+  void solve(int i, int j, vector<vector<int>> &a, int n, vector<string> &ans, string move, vector<vector<int>> &vis, int di[], int dj[])
   {
     if (i == n - 1 && j == n - 1) // when  u reach desti
     {
@@ -21,7 +21,7 @@ public:
       {
         vis[i][j] = 1;
         solve(nextI, nextJ, a, n, ans, move + dir[idx], vis, di, dj);
-        vis[i][j] = 0;
+        vis[i][j] = 0;//backtrack
       }
     }
   }
