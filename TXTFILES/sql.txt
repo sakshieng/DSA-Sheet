@@ -1,0 +1,147 @@
+____________________________SQL_________________________________
+{
+  SQL is basically the language that the user use to communicate with the Databases and get our required interpretation of data out of it
+
+
+  Used for
+  -->storing data
+  -->retrieving data
+  -->manipulating data out of DB
+
+To get started with SQL we need to install Database Management System server
+Some common RDBMS(will provide all required tools to perform opn on DB):
+-->Oracle
+-->MySQL
+-->PostgreSQL
+-->Heidi SQL
+
+It has well-structured standards,easy to learn,one can create multiple views using SQL,SQl queries are portable in nature
+
+
+  Types of commands in SQL:
+  -->DDL-data definition language
+  [
+    1.create
+    2.alter
+    3.drop( Used to delete the structure and record stored in the table)
+    4.truncate(Used to delete all the rows from the table, and free up the space in the table)
+  ]
+  -->DML-data manipulation language(maintenance)
+  [
+    1.insert
+    2.update
+    3.delete(Used to delete one or more rows in a table)
+  ]
+  -->TCL-transaction control language
+  [
+    1.commit(saves all transaction made on db)
+    2.rollback(it is used to undo transaction which are not yet been saved)
+  ]
+  -->DCL-data control language
+  [
+    1.grant(Used to grant a user access privileges to db)
+    2.revoke(Used to revoke the permissions from an user)
+    3.savepoint(Used to roll transaction back to a certain point without having to roll back the entirity of the transaction)
+  ]
+  -->DQL-data query language
+  [
+    1.select( It is used to retrieve selected data based on some conditions which are described using the WHERE clause)
+  ]
+}
+{
+  SQL Constraints(are rules which are applied on a table)------
+
+  1.not null-->Specifies that this column cannot store a NULL value
+  
+  2.unique-->Specifies that this column can have only Unique values, i.e the values cannot be repeated in the column
+
+  3.Primary Key--> It is a field using which it is possible to uniquely identify each row in a table.
+
+  4.Foreign Key--> It is a field using which it is possible to uniquely identify each row in some other table. 
+  [
+    It is used to maintain referntial integrity,it is used to cross link 2 tables together
+  ]
+
+  5.check--> It validates if all values in a column satisfy some particular condition or not
+
+  6.default--> It specifies a default value for a column when no value is specified for that field
+}
+{
+  SQL Opeartors
+  -->Arithmetic
+  -->Comparison
+  -->Logical
+  -->Bitwise
+  -->Relational
+  -->Compound
+}
+{
+  Clauses-->
+  1.order by:It is the keyword used to sort result in asending or descending order
+
+  2.group by:It groups rows that have the same values into summary rows,used with aggregate func
+
+  3.having:It was added 'where' keyword cannot be used with aggregate func
+
+  4.join:It is used to used to combine rows from 2 or more tables
+}
+{
+  SQLi is a vunerability that lets a malicious hacker introduce(inject) undesired SQL code into SQL queries executed by SW.
+}
+{
+  Joins in SQL-----
+  Joins allows us to fetch data after combining multiple tables of db
+
+  1.Inner join=>returns any records which have matching values in both tables
+
+  2.Natural join=>it is special type of inner join based on fact that column names and datatypes are same on both tables
+
+  3.Right join=>returns all of records from second table,along with any matching records from the first
+
+  4.Left join=>returns all of records from first table,along with any matching records from the second
+
+  5.Full join=>returns all records from both tables when there is match
+}
+{
+  Exception handling in C++
+  try:represent a block of code that can throw an Exception
+  catch:represent a block of code that get executed when error is thrown
+  throw:used to throw an Exception
+}
+[
+  -->Inline func:it is a func that is expanded in line when it is called
+  -->C++ has 52 keywords
+  -->Friend class can access the private and protected members of other class in which it is declared as friend
+  -->every object in C++ has access to its own address through pointer called 'this' pointer
+  -->Friend func doesn't have this pointer
+  -->'new' is dynamic memory allocator
+]
+[
+  packet sniffer->a passive receiver that records a copy of every packet that files by 
+  There are sw which are specially deployed for packet-sniffing
+  IP snoofing->the ability to inject pkts into internet with false source address
+]
+{
+  
+  a simplified overview of the event loop's order of operations
+   ┌───────────────────────────┐
+┌─>│           timers          │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │     pending callbacks     │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │       idle, prepare       │
+│  └─────────────┬─────────────┘      ┌───────────────┐
+│  ┌─────────────┴─────────────┐      │   incoming:   │
+│  │           poll            │<─────┤  connections, │
+│  └─────────────┬─────────────┘      │   data, etc.  │
+│  ┌─────────────┴─────────────┐      └───────────────┘
+│  │           check           │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+└──┤      close callbacks      │
+   └───────────────────────────┘
+
+}
+_______________________________________________________

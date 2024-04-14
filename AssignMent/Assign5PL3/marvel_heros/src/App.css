@@ -1,0 +1,88 @@
+/* App Container */
+.App {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #8fdded;
+}
+
+/* Main Title */
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #834242;
+}
+
+/* Search Section */
+.search {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: #5d361d;
+    width: auto;
+    max-width: 400px;
+    height: fit-content; 
+    margin-left: 38.5%;
+    /*increase the search bar size*/
+}
+
+.search img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #fff;
+}
+
+/* Character Cards Container */
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+
+/* Character Card Styles */
+.character-card {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background-color: #16222e;
+}
+
+.character-card:hover {
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.15); /*card should pop up*/
+
+}
+
+.character-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.character-card h3 {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 8px;
+    color: #e3bf31;
+}
+
+.character-card p {
+    font-size: 0.9rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    color: #d0c41fc2;
+}

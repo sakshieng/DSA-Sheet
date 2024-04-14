@@ -1,0 +1,68 @@
+___________________GRAPHS_______________________
+//https://csacademy.com/lesson/topological_sorting/
+Graph is a set of pairs of V,E  it is non-linear DS has edges and vertices
+-->Cycle: a path where the starting point and endpoint are the same vertex
+V-vertices/nodes
+E-edges
+Three types -->
+1.Directed
+{
+    u->v or v->u
+    either one of them two-way relationship
+    Indegree-no of edges pointing towards reference node 
+    Outdegree-no of edges pointing away from reference node
+}
+2.Undirected
+{
+    v<->u 
+    Degree-no of edges connecting to a node
+}
+3.Weighted
+{
+    void addEdge(vector <pair<int, int> > adj[], int u,
+                                     int v, int wt)
+{
+    adj[u].push_back(make_pair(v, wt));
+    adj[v].push_back(make_pair(u, wt));
+}
+}
+Total degree of graph=no of edges*2
+
+{
+
+Depth-First Search (DFS): This is the correct algorithm to find articulation bridges in an undirected graph. By using DFS, we can compute the discovery and low values for each vertex. The low value of a vertex tells us the earliest discovered vertex that can be reached from the subtree rooted at that vertex. If the low value of an adjacent vertex is greater than the discovery value of the current vertex, then the edge between them is a bridge.
+
+}
+
+{
+
+Breadth-First Search (BFS): BFS is not typically used to find articulation bridges. BFS is more about level order traversal and shortest paths in unweighted graphs.
+
+}
+
+{
+    
+Dijkstra's Algorithm: This algorithm is used for finding the shortest path from a single source vertex to all other vertices in a weighted graph. It's not used for finding articulation bridges.
+
+}
+
+{
+
+Kruskal's Algorithm: This is a minimum spanning tree algorithm. It's used to find a subset of edges in a connected, edge-weighted undirected graph that connects all the vertices together without any cycles and with the minimum possible total edge weight. It's not used for finding articulation bridges.
+
+}
+
+{
+    
+An AVL tree is a self-balancing(height-balancing) binary search tree where the difference between the heights of the two child subtrees of any node (called the balance factor) is at most one.All leaf nodes are not necessarily to be  at same level.
+
+
+A. The heights of the two child subtrees of any node differ by at most one.
+- This is a defining property of AVL trees. It ensures that the tree remains approximately balanced, which in turn ensures that operations like lookup, insertion, and deletion remain efficient.
+
+
+B. Lookup, insertion, and deletion all take O(log n) time.
+- they are balanced, the height of the tree is logarithmic w.r.t no. of nodes, ensuring that these operations are efficient.
+
+
+}

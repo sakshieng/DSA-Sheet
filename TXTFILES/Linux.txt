@@ -1,0 +1,497 @@
+
+We can develop analyse add new features improve the source code of software
+-->Program is an executable file
+they are stored on a disk or in secondary memory
+
+-->A program under execution is a process
+user starts a process thr terminal
+
+Interface
+|
+|-->GUI
+|-->CLI
+
+
+Process consists:
+|  stack  |
+|         |
+|  heap   |
+|  data   |
+|  text   |
+|_________|
+
+
+{
+    data stores global variables
+    heap stores local variables
+}
+{
+    A shell is a program that acts as an interface betn a user and the kernel
+    A Kernel is interface betn application and hardware
+    An OS is interface between user and hardware
+}
+Kernel
+|-->monolithic
+entire OS in a single work space(faster one)
+|-->micro
+core services of os run in one process while other services run in diff process (stable one)
+|-->hybrid
+combi of above 2 windows uses this
+
+LINUX has:
+(
+the linux Kernel
+additional software
+package manager
+software tools
+)
+
+web servers-->the platform where we search and get info 
+Applications of LINUX
+{
+    super-computers like IBM's summit played part in covid vaccines
+    ebook reader
+    fitness tracker
+    surveillance cameras
+}
+
+Mint is based on ubuntu lighter than linux
+Fedora one of most user-friendly uses for IOT
+Kali linux developed and maintained by offensive security based on Debian distro for penetration testing
+Arch linux is a lightweigth it is a rolling release i.e. constantly  updating their versions
+
+Linux system administrator
+{
+    it takes care of computers running on Linux OS
+    integrity and security of services
+}
+
+
+
+pwd--> print working directory
+cd-->change directory
+ls--> list contents of current directory
+flag will give 
+ls -l-->
+ls -a--> hidden files
+ls -lh-->
+mkdir-->make a directory
+rmdir-->delete empty directory
+rm--
+touch is to modify timestamps which has 3 timestamps
+{
+-a flag for access -m for modification -d for change
+}
+cat-->used to create a file
+history-->gives all old commands
+nano-->
+-E-->in cat
+-a-->in cat
+man-->display user manual of any command -->flags -f -w(use as man intro)
+apropos-->find command if keyword is know -->flag -e(exact)(use as apropos intro)
+grep-->find phrase within a file 
+gio trash-->move file to trash(alternative for rm command)
+wc-->
+cat random
+comm-->to compare to files(it requires file in sorted order)
+by comm --nocheck a.txt b.txt we can directly get unique data
+
+_____________Grp management commands ______________
+we can remove grp which is not primary 
+for grp and user commands sudo privileges are required
+
+
+groupadd-->create group
+groupdel-->delete group
+useradd-->user is created
+userdel-->user is deleted
+gpasswd -a [username][groupname]-->add user to existing group
+gpasswd -d [username][groupname]-->delte user from existing group
+usermod -g [groupname][username]-->to change a user primary group
+usermod -a -G [groupname][username]-->to change a user secondary group
+
+
+
+_______File permission commands________
+chown-->
+chmod-->(sudo chmod g+w [name of file]) we are changed permissions of file to like we added write 
+        (sudo chmod a+x [name of file]) a for all got x
+risky command-->chmod 777
+                rwx|rwx|rwx
+                owner|group|others
+
+ctrl+a start ctrl+e at end ctrl+w delete word ctrl+l clear terminal ctrl+q used to clear line
+!! previous command gets repeated
+
+____________Process Management in Linux____________
+ps -aux-->aux means all users process
+pstree-->command for printing process tree
+when u boot the pc the first process that starts is 
+process exist in parent-child hierarchies 
+
+process started by pc is demon
+
+PID unique id
+%CPU cpu usage
+2 types of process-->
+foreground --dependent process which require user to interact with
+(like sleep 90 --> make bash sleep for 90 sec)
+background
+(like sleep 90 &)
+
+process Management means manipulating the process i.e. kill resume 
+->kill -l
+-->htop
+bg-->(bg jobID)
+ping-->connection 
+pidof-->
+after ps there are numbers display called as no
+kill-->(like kill -9 no)
+touch-->create simple file
+cat >
+cat >>
+cp-->copy file
+mv-->rename a file(directory) or move a directory
+
+
+_______PIPELINING IN LINUX_______
+sort -r-->will sort in reverse order
+gedit-->create a file if 
+for seeing contents of file use cat
+(
+Connecting data flow from one process to another. Output of one command is given to input for second command, this is done through pipe '|'.
+)
+ps -u[username] | grepm
+
+grep -u maria | "bash"
+
+cat [filename] | sort-->original file will not modify
+
+cat 1.txt | grep "hi"
+
+________File system and management_________
+-->Inode
+-->file permission
+-->advanced file management commands
+
+directory--collection of files it is organization of structures
+
+File system-->to recognize data by ur pc it controls data
+Formatting-->process of writing a file system to the disk and preparing it for file operation
+
+{
+    There are few common abstractions that are used in filesystem:
+    -->superblock
+    -->file
+    -->inode
+    -->dentry
+}
+
+bits-->sections-->memory blocks
+deleting --> means iterate thr data and delete each and every bit
+
+boot section-->what kind of data it holda in section
+
+1 byte=8 bits           1 kb=1000 bits
+
+Types of file system:
+Ext4    BtrFS   Fat32   XFS   NTFS   ZFS
+default memory size of boot section:4 kb
+
+Inodes-->addressing for memory block
+Inode bitmap-->It just occupies one block and is a sequence of 0s and 1s
+
+{
+    The bitmap technique is useful to quickly find free locations on the inode table (or data blocks) when modifying the filesystem.
+}
+
+if our system has 1MByte of data then it is fragmented in 4kb boot sections 
+Ext4-->extended 4-->upto what extent we can continuously allocate data
+
+Ext4DFS is online defragmentation tool for XFS file system it is [xfs_fsr]
+disk corruption-->link breaks and data integrity collapses
+allocation group-->
+
+file system used in servers-->ZFS(ZettaByte) 1 ZiB=1000EiB
+one feature of ZFS is transactional semantics   CheckSums   Built-in Scrub(checks chances of correction)  Single F.S. snapshot(it stores the state of disc)
+
+BtrFS uses 3 algorithms-->1.ZLIB
+                          2.LZO
+                          3.LSTD
+this is for transparent file compression
+here there is privilege of open source hence we can convert EXT->BtrFS 
+Android is based on base-linux EXT4 FS
+SSD supports all memory files
+Pendrive uses EXFAT FS
+
+{
+    kernel establishes a temporary root file-system using initrd(initial RAM disk) 
+    Restart button or CTRL+ALT+DELETE keys are used for warm boot
+}
+
+____________Linux directory structure__________
+the process that runs on PC is demon
+cdrom-->comapct disc -->external floppy discs
+command line tools-->nmap(python)
+when pendrive is connected to pc it is mounted(means recognize the data)
+each process is converted to file in linux to maintain the transparency
+sbin-->system bin-->for super user
+external services system needs-->printers routers mouse anti-virus
+sys-->direcly access kernel system
+usr-->universal 
+when we take backup that cashes are stored in var directory 
+to see hidden file-->ctrl+h
+in desktop directories are stored like .gnome as these are configuration directory
+
+
+______Users in Linux_________
+Types of users
+
+{
+    Regular-->has Moderate privilege it owns a home directory 
+    System-->Has highest privilege 
+}
+Super user-->Known as root users has access to everything on server 
+
+Sudo is master key to ur high privilege admin tasks 
+sudo has high privilege collection of zero or more users
+
+Types of grps (grps-->collection of zero or more users)
+Primary->
+Each user must belong to one primary grp
+Secondary->
+a user can be a member of zero or more secondary grps
+
+command for system users-->cat /etc/passwd
+
+|   |   |   |   |   |   |
+File permission-->chown and chargp commands
+3 types of permissions:
+Read 
+Write
+Execute(shell scripts are file which are executable)
+
+_____Defragmentation____
+
+If you actually need to defragment a file system, the simplest way is probably the most reliable: Copy all the files off the partition, erase the files from the partition, then copy the files back onto the partition. The file system will intelligently allocate the files as you copy them back onto the disk.
+
+fsck-->
+    You can measure the fragmentation of a Linux file system look for “non-contiguous inodes” in the output
+
+Defragmenting is an intensive process that moves the bits of files around to reduce fragmentation, ensuring each file is contiguous on the drive
+
+______Booting Process______
+{
+    6 stages of booting:
+    -->BIOS
+    -->MBR(master boot record)
+    -->GRUB(grand unified bootloader)
+    -->Kernel(mounts root file system in grub.conf file)
+    -->Init
+    -->Runlevel programs
+}
+
+{
+        in INIT process system looks for an init file,usually found at /etc/inittab to deide run level 
+        7 run levels
+        -->3-multi-user mode(network support)
+        -->5-graphical X11(GUI)
+}
+
+_______Types of booting__________
+Cold booting -->starting a computer which was switched off involves Power on Self Test(POST)
+
+Warm booting -->Restarting a computer without interrupting power doesn't involve POST
+
+Types of editors-->
+GEDIT-->GUI based text editor default text editor for GNOME 
+NANO-->Terminal based text editor 
+VI/VIM-->Terminal based text editor most used editor
+_________
+i-insert mode
+Esc-command mode
+:q!-quit without saving
+:w-save file but don't exit
+:wq-to write,save and exit
+
+{
+    -->a red-black tree is self-balancing binary search tree
+    -->a BST is an ordered/sorted binary tree
+    -->the time complexity of operations on the binary search tree is directly proportional to the height of the tree
+    -->BSTs are also a fundamental DS used in construction of abstract data structures as sets,multisets and associative arrays
+}
+
+
+
+
+{
+variables can be any type
+print("you are"+str(age) +"yars old,sep=",")
+print("you are",age ,"yars old)
+print("you are {age} yars old)
+
+format specifiers
+.(no)f -precision roundoff
+.(no)- allocate that spaces
+03 - zero pad that spaces
+< -left align
+> - right align
+^ -centre align
++ -indicate positive value
+= place sign to left position
+  - space before positive numbers
+, -seperator
+
+The None keyword is used to define a null value, or no value at all.
+None is not the same as 0, False, or an empty string. 
+None is a data type of its own (NoneType).
+
+In Python 3, there is effectively no limit to how
+ long an integer value can be. 
+
+float
+
+Complex numbers are specified as <real part>+<imaginary part>j.
+
+binary octa hexa
+
+Type Casting(explicit ,implicit)
+
+Input taking
+input("enter :")
+
+string ( single, double , triple quotes)-series of characters
+result=len(name)
+result=name.find("0")
+result=name.rfind("0")
+name=name.capitalize()
+name=name.upper()
+name=name.lower()
+name=name.isalpha()
+name=name.isdigit()
+name=name.count("-")
+name=name.replace("-"," ")
+print("hey" in name)
+help(str)
+
+string indexing-
+[start:end:step]
+[::-1] - reverse
+
+
+
+byte- positive (0to255,no neg,non-modifiable) 
+bytearray(same as bytes but modifiable)
+range
+r=range(10,20,step)
+for i in r:
+	print(i)
+10 12 14 16 18 
+
+collection-single variable to store multiple values
+
+list - [] ordered and Changeable, Duplicates Ok
+append
+extend([1,2,3])
+len
+remove
+insert(0,"djbs")
+sort
+reverse()
+clear
+.index("apple") - no index error
+.count
+pop - last if index not (returns element)
+
+set- {} unordered and immutable , but Add / Remove Ok, No duplicates
+no indexing
+s.update([78])
+remove
+pop -random
+
+s=frozenset(s)
+non modifiable
+
+Tuple-() Ordered And  Unchangeable ,Duplicates Ok . FASTER
+indexing
+
+print(dir(list))
+
+operators 
+
+if -else if
+ternary technique:
+`	print("a") if a>b else print("b")
+pass
+
+dictionary
+
+.get(key) - not present-> return None
+.update(new key:value) -unique keys
+.clear
+.popitem -remove latest pair
+del dic["name"]
+keys=dic.keys()
+values=dic.values()
+items=dic.items() - 2d list of tuples
+for key,value in items:
+	print(f"{key}:{value}")
+
+
+loops
+
+functions
+positional
+default
+keyword- positional before keyword
+arbitary 
+*args- reveives tuple of args
+**kwargs - dictionary
+f(state="vhvh",graph="hkj")
+}
+
+
+GUI-->Graphical User Interface that allows users to interact with different electornic devices using devices using icon and other visual indicators
+|Xfce |GNOME |KDE |
+
+CLI-->command line interface is a text-based it receives and processes command from user in form of text
+CMD-->windows OS
+
+________________NETWORKING COMMANDS________________
+
+ifconfig-->to initialize,enable or disable an interface 
+ip-->to assign an ip address
+hostname-->set and display hostname
+host-->DNS lookup operation
+nmap-->tool for network exploration
+nslookup-->to find domain name system related queries
+ping-->to check whether a system is accessible or not
+traceroute-->to find route of a packet
+
+_______________ADVANCED COMMANDS________________
+
+tac-->to display file contents in reverse order
+passwd-->change password
+su-->switch to another user
+id-->to display user ID and group ID
+gzip-->to compress file
+gunzip-->to decompress file
+od-->displays content of file in diff formats
+find-->finds a file within a directory
+uniq-->to display content of file in which every word will occur once(uniq<file name>)
+df-->displays the disk space used in system
+
+
+(cat welcome.txt--tac welcome.txt--passwd--whoami--su root--whoami--id)
+(ls--gzip abc.cpp--ls--od -b abc.cpp--od -c abc.cpp)
+(sleep 5s--zcat abc.txt.gz)
+(.tar.gz = Compressed archive)
+
+
+________CRON JOB_________
+
+crontab -l-->to view crontab entries of current user
+crontab -u username -l--> to view crontab entries of a specific User
+crontab -u -e -->user can edit their crontab jobs 
+crontab -r-->to remove your crontab tasks
+crontab -e-->to add or update job in crontab

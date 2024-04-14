@@ -1,0 +1,11 @@
+P_men=52 
+P_T_lit=48 
+T_pop=80000
+P_lit_M=35
+P_T_ilt=100-(P_T_lit)
+T_NO_M_W= (52*80000)/100
+T_NO_ilt_M=(35*T_NO_M_W)/100
+T_NO_ilt_W=T_NO_M_W-T_NO_ilt_M
+print("Total number of illiterate men and women = ",T_NO_M_W)
+print("Total number of illiterate men = ",T_NO_ilt_M)
+print("Total number of illiterate women = ",T_NO_ilt_W)

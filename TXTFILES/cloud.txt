@@ -1,0 +1,184 @@
+Chapter 1 Basic Cloud Concepts
+
+What is cloud computing?
+The practice of using a netowrk of remote servers hosted on the internet to store,manage, and process data, rather than a local server or a personal computer.
+
+Evolution of cloud hosting
+
+1-> Dedicated server :: One physical machine dedicated to single business [ run a single application]
+
+2-> Virtual Private Server :: One physical machine dedicated to single business but the machine is virtualized in submachines i.e can run multiple applications
+
+3-> Shared hosting :: One physical machine dedicated to hundreds of businesses.
+
+4-> loud hosting :: Multiple physical machine act as one system, one system is abstracted b multiple cloud services.
+
+What is Amazon ??
+
+Americal Multinational computer tecq cooperation in Seattle Washington
+found in 1994 by Jeff Bezos.
+
+What is AWS ?   Amazon Web Services.
+What is CSP ? Cloud Service Provider.
+
+Provides multiple Cloud Services
+Those cloud services can be chained together to create cloud architecture.
+Those cloud services are accessible via Single Unified API
+Those cloud services provide metered billing (depeding on use)
+Those cloud services have rich monitoring buit in eg. AWS CloudTrail
+Those cloud services have an Infrastucture as a Service (IaaS) offering.
+Those cloud services offers automation via infrastructure.
+
+
+A CSP can have 100's of cloud services grouped in various types.
+the most common 4 types are:
+1)Compute : having a vm that run application,programm,code. 
+2)Networking : having a vm defining newtwork connections or network isolations b/w servies or outbound to internet
+3)Storage : virtual hard-drive that can store files
+4)Databases : virtual database for storing reporting data or database for general purpose web application
+
+Types of Cloud computing
+
+Saas --> Software as a service [for customers]
+A product that is run and managed by the service Provider
+"Dont worry about how the sevice is maintained, it just works and remains available"
+eg: Gmail, SalcesForces, MicrosoftOffice
+
+PaaS --> Platoform as a service[for developers]
+Focus on deployment and management of your application.
+"Dont worry about provisioning, configuring or understanding the hardware of OS"
+eg Heroku
+
+IaaS --> Infrastucture as a service [For administrators]
+The basic building block for cloud IT, provides access to networking features, computes and data storage space.
+"Dont worry about IT staffing data centers and hardware"
+Eg Microsoft Azure, AWS
+
+
+
+
+
+
+
+evolution of cloud hosting-->
+1.dedicated server(very expensive & high security) --> then came virtual private server(better utilization & isolation of resources) one machine to single business
+
+2.virtual private server-->has better utilization and isolation of resources has one physical machine dedicated to single business
+
+3.shared hosting-->very cheap limited functionality has one physical machine shared by hundred of businesses
+
+4.Cloud hosting-->multiple physical machines that act as one system  (system is abstracted into multiple cloud services)
+
+
+{
+Simple Queue Service(SQS) was first AWS service launched for public
+Simple Storage Service (S3) was launched then after
+Elastic Compute Cloud (EC2) was also lauched  
+}
+
+CSP provides:::::::
+--multiple cloud services
+--accessible via single unified API
+--has metered billing based on usage
+--have rich monitoring unit (AWS CloudTRail) 
+--have an IaaS offering
+--offres automation via Infrastructure as Code(IaC)
+
+                        |-RDS
+                        |
+                        |-SES
+                        |
+Route53-->ELB-->EC2-----|
+                        |    
+                        |-QuickSight
+                        |
+                        |-S3
+
+
+__________Cloud service provider has many cloud services 4 core types are:
+
+1)Compute --> having a vm that run application,programm,code. 
+2)Networking --> having a vn defining newtwork connections or network isolations b/w servies or outbound to internet
+3)Storage --> virtual hard-drive that can store files
+4)Databases --> virtual database for storing reporting data or database for general purpose web application
+
+CSPs that are IaaS will always have 4 CS offerings-->
+Compute::EC2 virtual machines
+Networking & Content delivery::VPC Private Cloud Network
+Storage::EBS Virtual Hard Drives
+Database::RDS SQL database
+
+__________Evolution of computing ::::
+Dedicated->VMs->Containers->Functions
+In a dedicated-->
+a physical server wholly utilized by a single customer 
+In VMs-->
+u can run multiple virtual machines on one machine a physical server shared by multiple customers 
+In fuctions-->are managed VMs running managed containers known as serverless compute
+
+-------Types of cloud computing------
+{
+    SaaS->a product that is run & managed by service provider don't worry about how service is maintained.
+    eg-salesforce,gmail,office365
+}
+{
+    PaaS->focus on deployment and management of apps don't worry about provisioning,configuring or understanding the hardware or os
+    eg-Elastic beanstalk,heroku
+}
+{
+    IaaS->basic building block for cloud IT provides access to networking features & data storage space
+    eg-microsoft azure,aws,oracle
+}
+
+__________Cloud Computing Deployment Models
+
+1.Public Cloud -->
+It makes possible for anybody to access systems and services
+
+
+2.Private Cloud -->
+It’s a one-on-one environment for a single user.(On-premise)There is no need to share your hardware with anyone else.
+
+
+3.Hybrid Cloud -->
+By bridging the public and private worlds with a layer of proprietary software, hybrid cloud computing gives the best of both worlds
+
+
+4.Community Cloud -->
+It allows systems and services to be accessible by a group of organizations. It is a distributed system that is created by integrating the services of different clouds to address the specific needs of a community.
+
+
+5.Multi Cloud --> Instead of merging private and public clouds, multi-cloud uses many public clouds
+(cross cloud)
+ __________
+|          |         
+|  Amazon  |     
+|    EKS   | <----->Azure Arc<------->GCP Kubernetes Engine
+|__________|
+
+Anthos is GCP's offering for a control plane for compute across multiple CSPs and on-premise environments
+
+//Screenshot (544).png
+//refer to 545 ss
+Password:maria@1234
+
+
+_____________________CLOUD COMPUTING________________________ 
+
+Simply put, cloud computing is the delivery of computing services—including servers, storage, databases, networking, software, analytics, and intelligence—over the Internet (“the cloud”) to offer faster innovation, flexible resources, and economies of scale. You typically pay only for cloud services you use, helping lower your operating costs, run your infrastructure more efficiently and scale as your business needs change.
+
+Major Benefits:
+1)Cost   2) Speed  3) Global-scale  4) Productivity  5) Performance 
+6) Reliability  7) Security 
+
+Types of Cloud Computing: 
+1) Public 2) Private 3) Hybrid
+
+Uses Of Cloud Computing:
+1) Create cloud-native applications
+2) Test and build applications
+3) Store, back up, and recover data
+4) Analyse data
+5) Stream audio and video
+6) Embed intelligence
+7) Deliver software on demand

@@ -1,0 +1,205 @@
+1)What is Hadoop ?
+
+Apache based open source framework and is implemented in java
+it is not centred storage but is ditiubuted
+HDFS takes cared of distributed storage (Hadoop Distributed File System)
+Distributed processing of Big Data is done by || Map Reduce ||
+It is a Apache based open source framework implemented in java having Distributed Storage(HDFS) and Distributed processing (Map Reduce) for processing Big Data which supports Simple Programming Model, Parallel Processing and local computation & Storage.
+
+
+Simple Programming Model :: Model which maintains simplicity
+Parallel Processing :: serial processing goes way slower
+Local Computation and storage :: every node caries out local Computation
+
+2)Architecture of Hadoop
+ ___________________
+|    Map Reduce     | => Distributed Processing   
+|                   |
+|       HDFS        | => Distributed Storage
+|                   |
+|      Common       | => java modules files and scripts required 
+|     utilities     |    by hadoop modules to work
+|                   |
+|   YARN Framework  | => Yet Another Resource Negotiator (JS and RM)
+|___________________|    Job Scheduling and Resource Management
+
+
+|| MAP REDUCE ||
+
+based on yarn framework works for distributed processing and Parallel processing
+
+
+            |-- map()\
+            |         \ 
+INPUT ------|-- map() - reduce()\
+            |                    (())-> OUTPUT
+            |-- map() - reduce()/
+
+map() takes one form of set of data and converts to another form of set of data which is in the form of tuples (key value pair)
+reduce() combines the key value pair on basis of the keys and forms set of tuples
+
+1)master job cracker ::(one)
+    manages resources
+    Scheduling tasks
+    monitoring the tasks
+
+2)Slave task tracker ::(many)
+    Executes the tasks  
+    provides task status
+
+
+|| HDFS ||
+
+Name node && Data node
+(Master)       (Slave)
+data about the data ===> Meta data
+
+meta data is managed by Name node and it manages data node
+
+Block :: a file is devided into many segments called Block
+64mb size capacity of a data node
+
+How Hadoop works ??
+
+client has to give input and output locations
+job specifications
+
+          H
+ data ->  D --------> MAP REDUCE
+ prgm ->  F              /   \
+          S           Master Slave
+
+master devides the task into smaller task and distributes it to Slave
+and slave Executes the task & reports to master periodically
+when task is completly done by slaves then data is stored in data nodes
+
+
+|| Advantages                           || Disadvantages
+
+1)High computing power                  1)Not fit for small data
+2)Storage                               2)Security concerns
+3)Fault tolerance                       3)Prg. model is restrictive
+4)Flexibility(in terms of data)         4)Joins of multiple datasets in complex and slow
+5)Scalability           
+6)Low Cost(Open source)
+
+
+
+|| Hadoop Ecosystem ||
+
+It's not a programming language or a service provider
+It's a platform/framework used to solve big data problem
+
+It comprises of hadoop components
+1)HDFS
+2)yarn
+3)map reduce
+4)Apache Pig
+5)Apache Hive
+6)Mahout
+
+((())) Apache Hive ((())) 
+It is an open source warehouse system for quering and analysing large data set stored in H.files:Hive uses HQL as a language
+It is a distributed, fault-tolerant data warehouse system that enables analytics at a massive scale. A data warehouse provides a central store of information that can easily be analyzed to make informed, data driven decisions. Hive allows users to read, write, and manage petabytes of data using SQL.
+
+Data summarization,query, analysis
+
+uses HiveQl ==> HQL [ Hive + SQL]
+Highly Scalable
+
+        sql commands          converts
+user ----------------> Hive-------------> Master(hadoop cluster)
+          submit        |     sql to map
+                        |     reduce job
+                       \|/
+                    metaStore
+{
+    the created jobs are given to Hadoop cluster(masters+slave) as a input
+}
+
+|| Apache Pig ||
+
+It uses Pig Latin language for execution purpose and requires java runtime environment(JRE)
+
+Steps ::
+    1) User Defined Files present in Local File System
+    2)Those UDF are converted into pig script
+    3)pig script is passed to pig latin compiler
+    {
+        pig latin complier converts pig script into map reduce jobs
+    }
+    4)I/P files in HDFS are passed to pig latin compiler
+    5)Execution of map reduce jobs
+    6)O/P files are stored in HDFS
+    
+Developers had to care about map, the reduce fundamentals sort shuffle while creating a program for which they needed common operations such as joining, filtering and etc. These chanllenges kept on building up whicle optimizing and extending the code.
+you guys might already know how much of a work it is to optimize something to it's best.
+so production time increased, and data flow in mapReduce was quite rigid, out out of one task could be input as other.
+so pig was developed by yahoo in 2006
+pig is a query based language same as sql
+pig take cares of the map reduce and processed data is stored in HDFS
+pig language runs on pig environment such as java run on jvm.
+Pig helps to achieve ease of programming and optimization and hence is a major segment of the Hadoop Ecosystem.
+
+COMPONENTS OF PIG
+
+1)Pig latin language --> comprises of commands and syntax
+2)Pig runtime --> The runtime engine is a compiler that produces sequences of MapReduce programs
+
+Stages of pig operations
+
+stage 1: Load data and write pig script
+In this stage, data is loaded and Pig script is written.
+
+stage 2: Pig operations
+in the second stage, the Pig execution engine Parses and checks the script. If it passes the script optimized and a logical and physical plan is generated for execution.
+
+stage 3: Execution of the plan
+In the final stage, results are dumped on the section or stored in HDFS depending on the user command.
+
+Data model in pig
+
+()  Atom : atomic value like int , long , double ,string
+()  Tuple : sequences of field and can be of any data type
+()  Bag : It is a collection of tuples of potentially varying structures and can contain duplicates.
+()  maps : It is an associative array.
+In maps key should be of char type and value can be any
+
+Pig Execution modes
+
+1)Local mode : In the local mode, the Pig engine takes input from the Linux file system and the output is stored in same
+2)Mapreduce system : in MapReduce mode, the Pig engine directly interacts and executes in HDFS and MapReduce
+
+|| Apache HBase ||
+
+It is a noSQL distributed database system
+Data is stored in tabular form in no structured SQL
+{
+    data definition language-->is performed by region servers which are reactive in nature 
+}
+{
+the clients are connected with region servers and this relation is maintained by Zookeepers(load balancing and synchronization is done by them)
+}
+{
+    data manipulation language-->
+}
+the region servers are connected with data nodes in HDFS
+
+
+|| Mahout ||
+(Person who is controlling an elephant)
+
+H       M   java
+D ----> A -----------> analytical tecq on Big Data
+F       H   libraries
+S       O
+        U
+        T
+
+Tecq for implementing the algorithm ::
+1) Classification:-
+logistic Regression
+Naive Bayes
+
+2)clustering:-
+k-means clustering

@@ -1,0 +1,236 @@
+Backend -> Server Side Rendering
+
+# NOTE : Remember Backend is not about coding or implementing features i.e just a part of it, Actually Backend is learning about the Architecture of it and How it Works !!!
+
+Components Of Backend :
+
+1. Proxy -> Requests ko Collect karne ka kaam karta hai
+2. Load Balancer -> Request Kounse Server Pe Jaayega, wo decide karne ka kaam karta hai
+3. Web Server
+4. Cache
+5. Database
+
+{
+    System Design is the process of designing the architecture, components, and interfaces for a system so that it meets the end-user requirements
+}
+ACID Properties (SQL)
+1. A - Atomicity -> All Or None
+2. C - Consistent -> Data Sahi Form me store hona chahiye (i.e Number me Name store nahi hone chahiye)
+3. I - Isolation -> All Transactions should be Isolated
+4. D - Durability -> Jo paryant mi punha modify naahi karto, data change naahi hoyala paahije
+
+BASE Properties (NoSQL) -> 
+1.Basically Available
+2.Soft State
+3.Eventual consistency
+
+CAP Thoereom (Universal)
+1. C -> Consistency -> Fees Bharne pe turant refresh kiya, fees not paid dikhata hai, 10-15 seconds ke baad karne pe Fees paid dikhata hai !
+2. A -> Availability -> Suppose ek database band pad gaya, uske badle dusra database connect karne me jitna time lagta hai utne time server unavailable hota hai
+3. P -> Partition Tolerance -> Bahut bada data hota hai, usko partition karte hai (logically partition karte hai) 
+
+# Note : SQL Database madhe Partition Tolerance Kami Aste
+         MongoDB Consistency Follow Karto
+         MongoDB me single master hai, so Availability nahi
+         MongoDB madhe Partition Tolerance Aste
+
+*** Cassandra -> Available + Partition
+*** MongoDB -> Consistent + Partition
+
+
+# Note : Jaha Cluster hoga, waha consistency nahi hoti (Matlab waha time lagega hi) because database replicate karne me time lagega hi, jab tak replicate nahi hoga tab tak inconsistent
+
+# MongoDB Structure
+Master -> Many Slaves
+Master Band Padla Tar -> Baaki Slaves me election hoga, koun master banega
+
+# Note : Partitions aur Join saath me use nahi karte
+
+
+VPN -> Reverse Proxy -> Hamara IP leta hai and hamare behalf pe Internet pe apna IP bhejta hai
+e.g Sophos -> Firewall
+
+
+# Mongo vs Cassandra
+Mongo me ek hi master hota hai, wohi dadagiri karta hai, if wo band pad jaayega others will fight for who will do Dadagiri -> Eventual Availability
+
+Cassandra me sab friends hi tarah rehte hai, to usme saara data sabke pass rehta, but wo data batane me time lagta hai so Eventual Consistency Hoti Hai
+
+
+-> Kounsa Database use karaycha te use case var aste
+-> Archive jaisi cheezo ke liye kam servers rakhte hai
+-> Feeds ke liye bahut servers lagte hai
+-> Jo latest data ho wo cache me rakho for faster retrieval
+
+
+{
+    Global declaration of vector will give 0 value to all
+}
+
+-> Archive ko alag server do, Feed ko alag server dete hai industry me unlike what we do generally in our projects
+
+# MicroServices
+Chote Chote Applications banate hai and unko merge karke ek badi application Banayi jaati hai (Most Trending Nowadays)
+
+Why? => Scaling, agar kisi cheez ko kam requests aati hai to usko alag rakho taaki usko scale karne ki jarurat na pade
+
+Also alag alag components alag alag ho sakte hai matlab koi critical hoga, koi non-critical hoga agar unko seperate karde to alag alag type ka databse use kar sakte hai !
+
+
+# Cache -> RAM (Main Memory) of Server me store hota hai
+-> Faster Access ke liye
+-> Ek aadhi ghost aamhala immediate pahije tar te cache madhe store karnar
+-> e.g Rank of first 10 students
+-> Cache can affect consistency
+-> Cache ek fix time ke liye rehta hai, so suppose wo 10 second ke liye fix tha, us 10 second me top 10 me koi naya add hogaya toh hame wrong list dikhegi kyunki cache update 10 second baad hoga
+-> Obviously, we can design such system where agar list me change ho toh cache refresh ho jaaye
+
+-> Agar multiple servers ho to unka cache agar alag alag hoga, to uska cache inconsistent ho jaayega, so iske liye what we can do we make a different cache server
+
+-> Agar saare servers ke cache alag alag ho, to us case me we use something called as sticky session, means load balancer make sure ki meri request ushi server pe jaaye. Kisi aur server pe naa jaaye !!!
+
+-->Load balancing refers to efficiently distributing incoming network traffic across a group of backend servers, also known as a server farm or server pool.
+
+A library is a collection of prewritten code that can be used to simplify tasks
+These are found to be focused on narrow scopes such as strings, sockets, and IO
+So thier APIs are also small and require fewer dependencies. Example-->jQuery, NumPy
+The library can be invoked whenever and wherever you like
+
+                    Ur code
+        /                       \
+       /                         \   
+       Ur called library        Framework call u
+       |                            |
+       |                            |
+       library        contains   <----Framework
+       
+ interpreter <-- shebang
+ kernel la sangychey konti shell interpreter dyayla lagtey
+ shell sathi kuthli pn code script
+ env variables-->pre defined variables
+ escape charater la escape nhi kryche tr \ vapryche
+ env-->list of environment variables
+ $ --> variable trat
+ $BASH-->bash cha path
+ $BASH_version-->version of bash
+
+
+buy bigger machines → vertical scaling
+
+buy more machines → horizontal scaling
+
+
+________________________BASICS OF Backend____________________
+
+->MVC architecture
+server create routes create controllers create test routes,controllers,API for that exceptions we have to set middlewares database connect task-schema create moodles mdhe import krychet m,c,r,m app mdhe call krychet frontend add krychet
+
+diffrenece
+browser side js :-> DOM features like queryselector Window Interactive apps No filesystem Fragmentation ES6 modules
+
+Node.js :->
+
+It is runtime environment
+Framework(a set of tools which guides us to to develop a piece of code) like Express uses Node runtime environment No DOM No geolocation No window objects Server side apps Filesysytem version MVC architecture CommonJS,every file is module(by module) only logic without graphical interface
+
+Intro to Node.js and Express.js
+->modules means encapsulated code(only share minimum) some built-in modules are-> OS Path FileSystem HTTP
+
+{
+
+Common server responses:
+200 OK -
+the request was successful (some API calls may return 201 instead).
+
+204 No Content -
+the request was successful but there is no representation to return (i.e. the response is empty).
+
+401 Unauthorized -
+authentication failed or user doesn't have permissions for requested operation.
+
+403 Forbidden -
+access denied.
+
+404 Not Found -
+resource was not found.
+
+422 Unprocessable Entity -
+requested data contain invalid values.
+
+->All requests must be sent over HTTPS protocol<- } { -->Express application can use the following types of middleware:
+
+1.Application-level middleware 2.Router-level middleware 3.Error-handling middleware 4.Built-in middleware 5.Third-party middleware
+
+}
+________________________
+
+
+<-------------------The ultimate git cheatsheet--------------->
+
+git init->initializing an existing directory as a Git repository
+
+git clone[repo_url]->clone(download) a repository that already exists on github
+
+git remote add origin[url]->after using git init,link local repo to an empty git repo 
+
+git config --global user.name"[firstname lastname]"-->set a username
+
+git config --global user.email"[firstname lastname]"-->set an email address
+
+git branch-->to check which branch it is
+
+git branch [branch-name]->create a new branch
+
+git checkout -b [branch-name]->creates new branch and switch to that branch using only one command
+
+git branch -d [branch-name]->deletes the specified branch
+
+----for stage and snapshot----
+
+git status-->show modified files in working directory,staged for ur next commit
+
+git add[file_name]-->add a file as it looks now to ur next commit(stage)
+
+git add-->add all changed files to staging area
+
+git commit -m"[descriptive message]"-->commit ur staged content as a new commit snapshot
+
+git pull origin <branch_name> --> updates ur current local working branch with all new commits from corres. remote branch on github
+{
+    git pull is combi of git fetch and git merge
+}
+
+git push origin <branch_name> -->updates all local branch commits to github
+
+git fetch-->synchronize ur local repo with remote repo on github.comb
+
+{
+    Sometimes it may be a good idea to exclude files from being tracked with git.This is typically done in special file named .gitignore
+}
+
+----Redo Commands----
+
+git reset-->reset staging area to match most recent commit,but leave working directory unchanged
+
+git reset --hard-->reset staging area and working most recent commit & overwrites all changes in working directory
+
+git revert <commit> -->create a new commit that undoes all of changes made i,then apply it to current branch
+
+----Temporary Commands----
+
+git stash-->put current changes from ur working directory into stash for later use
+
+git stash pop-->apply stored stash content into working directory and clears stash
+
+git stash drop-->delete a specific stash from all ur previous stashes
+
+
+{
+    IP PATTERN
+    String pattern = 
+        "^([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
+        "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
+        "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
+        "([01]?\\d\\d?|2[0-4]\\d|25[0-5])$";
+
+}
