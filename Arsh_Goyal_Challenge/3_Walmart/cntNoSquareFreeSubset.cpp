@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/count-the-number-of-square-free-subsets/description/
 #include <bits/stdc++.h>
-// go thr this question
+// go thr this question bitmask dp
 //  https://leetcode.com/problems/distinct-prime-factors-of-product-of-array/description/
 using namespace std;
 

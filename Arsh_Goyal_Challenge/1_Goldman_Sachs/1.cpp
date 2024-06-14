@@ -11,7 +11,7 @@ int solve(ll n, int B)
 }
 int help(ll l, ll r, ll b)
 {
-     ll ans = (r - l + 1) % mod;
+    ll ans = (r - l + 1) % mod;
     ans = (ans * ((l + r) % mod)) % mod;
     ans = (ans * b) % mod;
     ans = (ans * ((mod + 1) / 2)) % mod;
