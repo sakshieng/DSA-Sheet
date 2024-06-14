@@ -2,6 +2,9 @@
 // 𝕊𝕒𝕜𝕤𝕙𝕚 ℂ𝕠𝕕𝕖𝕤 𝕙𝕖𝕣𝕖
 using namespace std;
 // https://leetcode.com/problems/invert-binary-tree/
+// https://www.naukri.com/code360/problems/convert-binary-tree-to-mirror-tree_873140?leftPanelTabValue=PROBLEM
+// https://www.naukri.com/code360/problems/convert-binary-tree-to-mirror-tree_873140
+//traverse the tree and swap left and right child of each node
 
 struct TreeNode
 {

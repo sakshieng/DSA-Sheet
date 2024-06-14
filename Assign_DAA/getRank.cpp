@@ -1,6 +1,6 @@
 //last que
 /*
-Imagine you are reading in stream of integers. Periodically, you wish to be able to look up the rank of number x (the number of values less than or equal to x). Implement the data structures and algorithms to support these operations. That is, Implement the method track (int x), which is called when each number is generated, and the method getRankOfNumber (int x), which return the number of values less than or equal to x (not including x itself).
+Imagine you are reading in stream of integers. Periodically, you wish to be able to look up rank of number x (number of values less than or equal to x). Implement data structures and algorithms to support these operations. That is, Implement method track (int x), which is called when each number is generated, and method getRankOfNumber (int x), which return number of values less than or equal to x (not including x itself).
 */
 #include <iostream>
 using namespace std;

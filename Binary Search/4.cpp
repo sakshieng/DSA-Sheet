@@ -3,7 +3,7 @@
 using namespace std;
 // WE CAN FIND SQUARE ROOT USING BINARY SEARCH
 // for root of 2 upto 2-decimal precision search place is 1.00 1.01 1.02 1.03 ------- 1.99 2.00 
-// take mid 1+2/2=1.5 check 1.5*1.5 is >< 2 then serch place is 1 to 1.5
+// take mid 1+2/2=1.5 check 1.5*1.5 is >< 2 then search place is 1 to 1.5
 // for 5-decimal places epsilan
 double eps= 1e-6; 
 int main()

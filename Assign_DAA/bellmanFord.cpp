@@ -70,7 +70,6 @@ void solve()
 
 int main()
 {
-    solve(); // Call the solve function directly
-
+    solve(); 
     return 0;
 }

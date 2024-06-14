@@ -32,19 +32,5 @@ int main()
       }
       fclose(f1);
    }
-      return;
+   return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

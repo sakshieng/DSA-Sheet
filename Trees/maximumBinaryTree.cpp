@@ -14,23 +14,22 @@ struct TreeNode
 class Solution
 {
 public:
-    // max no->root then left subarray max is left child right subarray max is right c
-    TreeNode *solve(vector<int> &nums, int i, int j)
+    TreeNode *solve(vector<int> &nums, int left, int right)
     {
-        // recursive->tc O(n^2)
-        if (i > j)
-            return nullptr; // base case
-        int p = i;          // idx of largest elmt
-        for (int k = i + 1; k <= j; ++k)
-            if (nums[k] > nums[p])
-                p = k;
-        TreeNode *root = new TreeNode(nums[p]); // val to root should be maxi
-        root->left = solve(nums, i, p - 1);     // maxi in left subarray
-        root->right = solve(nums, p + 1, j);    // right subarray maxi
+        if (left >= right)
+            return NULL;
+        TreeNode *root = new TreeNode(0);
+        auto maxIt = max_element(nums.begin() + left, nums.begin() + right); // this is iterator to max elmt in range [L,R]
+        int maxIdx = maxIt - nums.begin();                                   // idx of maxElmt
+        root->val = nums[maxIdx];
+        root->left = solve(nums, left, maxIdx);
+        root->right = solve(nums, maxIdx + 1, right);
         return root;
     }
     TreeNode *constructMaximumBinaryTree(vector<int> &nums)
     {
-        return solve(nums, 0, nums.size() - 1);
+        if (nums.size() == 0)
+            return NULL;
+        return solve(nums, 0, nums.size());
     }
 };

@@ -1,6 +1,6 @@
 Backend -> Server Side Rendering
 
-# NOTE : Remember Backend is not about coding or implementing features i.e just a part of it, Actually Backend is learning about the Architecture of it and How it Works !!!
+# NOTE : Remember Backend is not about coding or implementing features i.e just a part of it, Actually Backend is learning about  Architecture of it and How it Works !!!
 
 Components Of Backend :
 
@@ -11,7 +11,7 @@ Components Of Backend :
 5. Database
 
 {
-    System Design is the process of designing the architecture, components, and interfaces for a system so that it meets the end-user requirements
+    System Design is  process of designing  architecture, components, and interfaces for a system so that it meets  end-user requirements
 }
 ACID Properties (SQL)
 1. A - Atomicity -> All Or None
@@ -137,13 +137,13 @@ Intro to Node.js and Express.js
 ->modules means encapsulated code(only share minimum) some built-in modules are-> OS Path FileSystem HTTP
 
 {
-
+ 
 Common server responses:
 200 OK -
-the request was successful (some API calls may return 201 instead).
+ request was successful (some API calls may return 201 instead).
 
 204 No Content -
-the request was successful but there is no representation to return (i.e. the response is empty).
+ request was successful but there is no representation to return (i.e.  response is empty).
 
 401 Unauthorized -
 authentication failed or user doesn't have permissions for requested operation.
@@ -157,7 +157,7 @@ resource was not found.
 422 Unprocessable Entity -
 requested data contain invalid values.
 
-->All requests must be sent over HTTPS protocol<- } { -->Express application can use the following types of middleware:
+->All requests must be sent over HTTPS protocol<- } { -->Express application can use  following types of middleware:
 
 1.Application-level middleware 2.Router-level middleware 3.Error-handling middleware 4.Built-in middleware 5.Third-party middleware
 
@@ -183,7 +183,7 @@ git branch [branch-name]->create a new branch
 
 git checkout -b [branch-name]->creates new branch and switch to that branch using only one command
 
-git branch -d [branch-name]->deletes the specified branch
+git branch -d [branch-name]->deletes  specified branch
 
 ----for stage and snapshot----
 
@@ -198,6 +198,7 @@ git commit -m"[descriptive message]"-->commit ur staged content as a new commit 
 git pull origin <branch_name> --> updates ur current local working branch with all new commits from corres. remote branch on github
 {
     git pull is combi of git fetch and git merge
+    .gitignore -> It helps you enforce policy around which files should be excluded from version control
 }
 
 git push origin <branch_name> -->updates all local branch commits to github
@@ -206,8 +207,16 @@ git fetch-->synchronize ur local repo with remote repo on github.comb
 
 {
     Sometimes it may be a good idea to exclude files from being tracked with git.This is typically done in special file named .gitignore
-}
 
+    secret scanning --> Looks for known secrets or credentials committed within repository
+}
+git blame --> displays commit history for a file
+
+git clone --bare repo_url -->  creates a full copy of  data,but without a working directory for editing files, and ensures a clean, fresh export of all old data
+
+git push mirror rpo_url -->  which ensures that all references, such as branches and tags, are copied to the imported repository
+
+git remote -v --> Verifies the new remote URL
 ----Redo Commands----
 
 git reset-->reset staging area to match most recent commit,but leave working directory unchanged
@@ -224,6 +233,13 @@ git stash pop-->apply stored stash content into working directory and clears sta
 
 git stash drop-->delete a specific stash from all ur previous stashes
 
+{
+    different stauses of pull requests ->
+    Draft pull request
+    open pull request
+    closed pull request
+    merged pull request
+}
 
 {
     IP PATTERN

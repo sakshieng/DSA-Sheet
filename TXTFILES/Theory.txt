@@ -28,16 +28,27 @@ if(x)
 x==0
 if(!x)
 
+//LCM
+int g=__gcd(y,z);
+return (x*g)/__gcd(x,g);
+
+//Bit manipulation
+• __builtin_clz(x): number of zeros at beginning of bit representation
+• __builtin_ctz(x): number of zeros at end of bit representation
+• __builtin_popcount(x): number of ones in bit representation
+• __builtin_parity(x): parity (even or odd) of number of ones in
+bit representation
+
 -->An important concept in sorting is inversions. 
 
 
--->An inversion in a sequence is defined as a pair of elements that are out of order with respect to the ordering relation
+-->An inversion in a sequence is defined as a pair of elements that are out of order with respect to ordering relation
 
 
 -->A sorting algorithm is a sequence of operations that reduces inversions to 0.
 
 
--->The Web 3.0 also referred as Semantic Web or read-write-execute is the era(2010 and above) which refers to the future of web. 
+-->The Web 3.0 also referred as Semantic Web or read-write-execute is era(2010 and above) which refers to future of web. 
 
 
 -->Subarray question approach:
@@ -55,27 +66,22 @@ Stack	                                Heap
 :Stack is a linear data structure.    :Heap is a hierarchical data structure.
 
 
-//LCM
-int g=__gcd(y,z);
-return (x*g)/__gcd(x,g);
-
-
 
 Two security affecting factors
 {
   -->unauthorized access
   -->viruses
 }
-Both the gateway and router regulate the traffic in the network.
+Both gateway and router regulate traffic in network.
 
 [
-  POP3 stands for Post Office Protocol version3. POP is responsible for accessing the mail service on a client machine. POP3 works on two models such as Delete mode and Keep mode.
+  POP3 stands for Post Office Protocol version3. POP is responsible for accessing mail service on a client machine. POP3 works on two models such as Delete mode and Keep mode.
 ]
 {
-  The "netstat" is a command line utility program. It gives useful information about the current TCP/IP setting of a connection.
+  The "netstat" is a command line utility program. It gives useful information about current TCP/IP setting of a connection.
 }
 {
-  The "ping" is a utility program that allows you to check the connectivity between the network devices. You can ping devices using its IP address or name.
+  The "ping" is a utility program that allows you to check connectivity between network devices. You can ping devices using its IP address or name.
 }
 
 OS-->system software that manages computer hardware,software resources and provides common services for computer program
@@ -99,21 +105,21 @@ void mdhe return lihile ki recursion nhi honar
 non-linear data stru traversal ne data print krycha karan index kami yet nhit ithe
 
 ______CROW________
-A Fast and Easy to use microframework for the web.
+A Fast and Easy to use microframework for web.
 Crow is a C++ framework for creating HTTP or Websocket web services. It uses routing similar to Python's Flask which makes it easy to use. It is also extremely fast, beating multiple existing C++ frameworks as well as non C++ frameworks.
 _________
 
-In computing, an emulator is hardware or software that enables one computer system (called the host) to behave like another computer system (called the guest).
+In computing, an emulator is hardware or software that enables one computer system (called host) to behave like another computer system (called guest).
 
 
 {
-  Defragmentation is often done to improve computer performance.It is the process of moving clusters as close together as possible in order to speed the system up. This procedure involves moving data from one location on the drive to another. As such, data can be overwritten in the process. These overwritten (destroyed) data may have had some 
+  Defragmentation is often done to improve computer performance.It is process of moving clusters as close together as possible in order to speed system up. This procedure involves moving data from one location on drive to another. As such, data can be overwritten in process. These overwritten (destroyed) data may have had some 
   evidentiary value.
 }  
 
 Web App Firewall (WAF) protects your web apps against common threats like SQL injection and Cross-Site Scripting
 
-Cryptography is the study of secure communications techniques that allow only the sender and intended recipient of a message to view its contents
+Cryptography is study of secure communications techniques that allow only sender and intended recipient of a message to view its contents
 
 Metadata is data that provides information about other data
 TYPES OF META-DATA-->
@@ -129,17 +135,15 @@ Packet sniffers can be used on both wired and wireless networks
 
 A histogram is a graphical display of how a variable is distributed
 
-git log --oneline command is useful for getting a high-level overview of the project history
+git log --oneline command is useful for getting a high-level overview of project history
 
 Due to Blockchain transparency is crptocurrency,voting system,logistive and supply chain and NFTs 
 
-_____ https://www.atlassian.com/git/tutorials/gitops ______
 
-
-Throughput is basically equivalent to digital bandwidth consumption; it can be calculated mathematically using the queueing theory, where the load in packets per time unit is represented by the arrival rate, and the throughput is marked by the departure rate.
+Throughput is basically equivalent to digital bandwidth consumption; it can be calculated mathematically using queueing theory, where load in packets per time unit is represented by arrival rate, and throughput is marked by departure rate.
 Throughput is dependent on latency-->rate*time
 A glossary is a collection of words pertaining to a specific topic. Are always in alphabetical order.
-A glossary is used to ensure that all stakeholders (business and technical) understand what is meant by the terminology, acronyms, and phrases used inside an organization.
+A glossary is used to ensure that all stakeholders (business and technical) understand what is meant by terminology, acronyms, and phrases used inside an organization.
 
 Github uses Linked list and trees as its data structure
 
@@ -148,20 +152,16 @@ The data type modifiers are listed here -->signed -->unsigned -->long -->short
 Type Qualifiers in C++ -->const -->volatile -->restrict
 
 {
-Nmap is used to identify and scan systems on the network.
+Nmap is used to identify and scan systems on network.
 }
 {
   Firebase is an app development platform that helps u build and grow apps & games users. Making big money requires 1% intelligence and 99% temperament.
 } 
 
 
-https://www.educative.io/blog/multithreading-and-concurrency-fundamentals
 https://www.codechef.com/problems/PERMXORSUM?tab=statement
 https://www.codechef.com/COOK143D/submit/XORPERM?tab=statement
 https://leetcode.com/problems/flipping-an-image/discuss/1358902/Two-Pointer-(C%2B%2B)
-https://www.youtube.com/watch?v=9sQKXgTjxnM
-https://www.youtube.com/watch?v=32NvAXF-P9I
-https://www.simplilearn.com/learn-data-analytics-for-beginners-skillup?utm_campaign=SkillUpBrandVideo&utm_medium=DescriptionFirstFold&utm_source=youtube
 https://www.codechef.com/viewsolution/76142475
 https://www.codechef.com/viewsolution/76084469
 https://www.codechef.com/viewsolution/76087737
@@ -172,8 +172,6 @@ https://www.codechef.com/viewsolution/74764138
 https://www.codechef.com/viewsolution/76076762
 https://www.codechef.com/viewsolution/76084029
 https://www.codechef.com/viewsolution/76142893
-https://www.geeksforgeeks.org/accumulate-and-partial_sum-in-c-stl-numeric-header/
-https://levelup.gitconnected.com/linux-ubuntu-commands-to-speed-up-your-daily-work-32f0d2517e8b
 
 
 
@@ -196,11 +194,11 @@ Types of DBMS:
 .Object-oriented
 
 Users of DBMS can be categorized as:
--->Administrators(maintain the DBMS & are responsible for administrating database)
+-->Administrators(maintain DBMS & are responsible for administrating database)
 -->Designers(are grp of people who actually work on designing part of database)
--->Endusers(are those who actually reap the benefits of DBMS)
+-->Endusers(are those who actually reap benefits of DBMS)
 
-Data Abstraction refers to the process of hiding irrelevant details from the user. , Three levels there - View Level, Conceptual Level, and Physical Level
+Data Abstraction refers to process of hiding irrelevant details from user. , Three levels there - View Level, Conceptual Level, and Physical Level
 Data redundancy is present in files
 When we import foreign key then it is primary key for another
 
@@ -241,7 +239,7 @@ All devices are connecetd to a single HUB--> central node
 
 
  Disadvantes:
- 1)central hub fail jhala --> crashes the Topology
+ 1)central hub fail jhala --> crashes Topology
  2)The cost of Installation is very high
  3)Performance is beased on single concentrated i.e HUB
 
@@ -253,18 +251,18 @@ All devices are connecetd to a single HUB--> central node
 
 Advantages:
 1) 1 cable for n devices , n drop lines
-2) Low cost of the cable and is used to build small networks
+2) Low cost of cable and is used to build small networks
 
 Disadvantes:
-1)if the Common cable fails, the Topology gets crashed
-2)if the network traffic is heavy the amount of collisions rises.
+1)if Common cable fails, Topology gets crashed
+2)if network traffic is heavy amount of collisions rises.
 3)Low security
 
 {
 Manchester code (also known as phase encoding
 -->It is a self-clocking signal with no DC component
 }
-Low pass channel or medium with the bandwidth that starts from zero.
+Low pass channel or medium with bandwidth that starts from zero.
 
-Band pass channel has the bandwidth that does not start from zero.
+Band pass channel has bandwidth that does not start from zero.
 

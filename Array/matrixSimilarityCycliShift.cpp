@@ -12,7 +12,7 @@ public:
         vector<vector<int>> ans = mat;
 
         for (int i = 0; i < m; ++i) {
-            if (i % 2 == 0) {
+            if (!i<<1) {
                 rotate(ans[i].begin(), ans[i].begin() + k % n, ans[i].end());//even
             } else {
                 rotate(ans[i].rbegin(), ans[i].rbegin() + k % n, ans[i].rend());//odd

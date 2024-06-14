@@ -11,7 +11,7 @@ Evolution of cloud hosting
 
 3-> Shared hosting :: One physical machine dedicated to hundreds of businesses.
 
-4-> loud hosting :: Multiple physical machine act as one system, one system is abstracted b multiple cloud services.
+4-> cloud hosting :: Multiple physical machine act as one system, one system is abstracted b multiple cloud services.
 
 What is Amazon ??
 

@@ -122,7 +122,7 @@ user ----------------> Hive-------------> Master(hadoop cluster)
 It uses Pig Latin language for execution purpose and requires java runtime environment(JRE)
 
 Steps ::
-    1) User Defined Files present in Local File System
+    1)User Defined Files present in Local File System
     2)Those UDF are converted into pig script
     3)pig script is passed to pig latin compiler
     {

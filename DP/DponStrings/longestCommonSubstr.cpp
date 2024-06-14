@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+n-ary tree ka lowest ancestor#include<bits/stdc++.h>
 //sakshi codes here
 using namespace std;
 //subsequnce cant be consecutive but substr->consecu
