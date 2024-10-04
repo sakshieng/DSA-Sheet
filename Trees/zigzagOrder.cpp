@@ -31,15 +31,18 @@ public:
             for (int i = 0; i < n; ++i)
             {
                 TreeNode *tmp = q.front();
-                if (level == 0)
-                {
-                    curr[i] = tmp->val; // odd level insert like 0,1,2,3
-                }
-                else
-                {
-                    curr[n - i - 1] = tmp->val; // even level insert like 3,2,1,0
-                }
                 q.pop();
+                // int idx = level ? i : (size-i-1); 
+                // if (level == 0)
+                // {
+                //     curr[i] = tmp->val; // odd level insert like 0,1,2,3
+                // }
+                // else
+                // {
+                //     curr[n - i - 1] = tmp->val; // even level insert like 3,2,1,0
+                // }
+                // q.pop();
+                curr[idx] = tmp->data;
                 if (tmp->left)
                     q.push(tmp->left);
                 if (tmp->right)

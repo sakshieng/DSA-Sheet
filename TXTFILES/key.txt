@@ -1,0 +1,233 @@
+•What are microservices?
+•DevOps->deployment of software which is created by SDE
+•Operations
+•What is Autoscaling?
+•Cold starts
+•AWS lambda
+•Serverless architecture
+•Caching
+•Proxy
+•What is Load balancing?
+•Enterprise appln
+•Data replication->Its types
+•Distributed databases
+•Shrading of data
+•Communication mechanism
+•What is async and sync?
+•Socket IO->Async=>Where it is used?
+•MQTT(Message Queuing Telemetry Transport)
+•MQ(Message Queuing)
+•REST APIs
+•Client to client communication by IOT devices
+•PubSub->multiple client multiple servers->Publisher/Subscriber model
+•Apache Camel->Rabbit MQ
+•Redis database
+•What are Distributed queues?
+•How to scale a queue?
+•What is stream data?
+•What is elastic search?
+•Master-Slave model in MongoDB
+•Cassandra(NoSQL database management system)
+•JOIN query in SQL
+•CQRS(Command and Query Responsibility Segregation)
+•What is logging?
+•Event Sourcing
+•GraphQL(A query language for your API )
+•SSH(Secure shell protocol)
+•RSA(used with Transport Layer Security (TLS) to secure communications between two individual)
+•Secondary keys in DBMS
+• Tunneling
+{
+    a tunneling protocol is a communication protocol which allows for the movement of data from one network to another, by exploiting encapsulation
+}
+{
+C=>Consistency
+A=>Availability
+P=>Partition Tolerance
+}
+{
+    Client->internet->Load balancers->servers
+}
+{
+    CDN->content delivery network
+    it is located closer than data center farther than ISP
+    stores static data
+}
+
+
+ 3 types of metatags->char set & http-equiv
+
+ !--There are five types of position property :
+
+.static
+.relative
+.absolute
+.fixed
+.sticky
+
+1--position:static;--default position
+
+2--position:relative;--when we need to position an element reative to its normal position
+
+3--position:absolute;--when element with the absolute position will move according to the position of its parent element
+
+
+4--position:fixed;-- will remain stuck to a specific position even after the page is scrolled
+
+
+5--position:sticky;--will just sit there until a given position offset is met
+
+Types of cases:
+1.camelCase
+2.snake_case
+3.UPPER_SNAKE_CASE
+4.Kebab-case
+5.PascalCase
+
+Famous fonts:Poppins,Single day,Siemreap,Rubik,Architects daughter
+
+Image's Websites:Vecteezy,Freepik,Unsplash,Pixabay,Pexels,Stockvault,PicJumbo,Pikwizard
+
+Some HTML tags:<details>,<mark>,<s>,<abbr>,<code>
+
+Websites:Dev tools,30 seconds of code,Calligraphy,Whatruns
+
+Free web hosting services:Infinity free,OOOWebHost,AwardSpace,ByetHost,Free hostia,Free Hosting
+
+
+Icons Websites:iconer.com
+
+just visit--->frontegg.com goodgigs.com
+
+jetbrains.com-->for tools
+
+heroku.com||
+
+https://hackr.io/devops
+An HTML form is used to collect user input
+--> <form>
+--> <input type="text">(defines a single-line input field for text input)
+--> <input>
+--> <input type="radio">
+--><a> stands for anchor tang by hyperlink
+--><div class="sak"> class attribute is often used to point to a class name in style sheet
+/*
+CSS --> Cascading Style Sheets which makes websites responsive
+
+selector-->position where to place -->p
+property-->color & value-->blue which is general syntax p{color:blue;}
+
+3 ways of markup(html code)
+1.INLINE CSS-->CSS is added to elemnts directly using style attributes
+2.INTERNAL CSS-->CSS is kept inside the head tags in <style> tags
+3.EXTERNAL CSS-->CSS is kept separately inside a.CSS style sheet
+
+NOTE: external CSS includes write CSS in .CSS file and include that CSS file to markup 
+*/
+An entity is a piece of text (“string”) that begins with an ‘&’ and ends with a ‘;’. 
+ Give the title as HTML Entities in the <title> tag.
+ <header> , <nav> , <section> , <article> , <footer> imp semantic tags 
+ Inline CSS is more imp than Internal CSS
+ {go to 15css.html}
+{
+        comes under CSS variables
+local variable declaration syntax -> --box1-color:red; and when same variable is defined in root/body it will become global
+if we have to assign this color then background-color:var(--box-color)
+
+-->Transform property in CSS will give coolest animation effect
+
+-->Advanced CSS Grid have some cool properties like 
+.class{
+        display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+[
+        Suppose we have CSS of navbar and footer then will just do
+        grid-template-areas:'footer footer'; 
+        grid-template-areas:'navbar'; 
+        which will apply that property multiple times
+
+->use span over button for responsiveness
+]
+}
+<CSS Selectors are used to find element whose property will be set
+Selectors are used to target the html elements
+It makes easy for us to easily target single/multiple HTML elemnts in markup
+4 types-->
+1.CSS element 2.CSS id 3.CSS class 4.CSS grouping
+
+Inline CSS allows you to apply a unique style to one HTML element at a time. You can assign the Inline CSS to a specific HTML element by using the style attribute with any CSS properties defined within it. Let us try to understand this with an example.
+<body>
+         <h1>This is CSS tutorial</h1>
+          <p style= “color: red;”>This tutorial will teach you everything you need to know about CSS</p>
+</body>
+
+Internal CSS is used to define a style tag for a single HTML page. It is defined in the <head> section within a <style> element. Let us understand the External CSS with the help of an example.
+<head>
+     <style>
+              p{
+                   color: purple;
+                 }
+     <style>
+<head>
+
+External CSS is mostly used when you want to make changes on multiple pages. It is an ideal condition because it facilitates you to change the look of the entire website by changing just one file. We will add the stylesheet in the <head> section using <link> tag.
+<head>
+       <link rel= “stylesheet” href= “tut13.css”>
+<head>
+
+
+Box Sizing::
+On giving width to the element and after that applying padding in the container, the width also changes. It is because in the actual width of an element, margin is already been added into it. If you want this not to happen then you can use the property of ‘box-sizing’.
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+   }
+*/
+
+
+
+
+
+
+
+/--------------------------JAVASCRIPT----------------------------/
+
+Everything in JS happens in execution context
+
+ ______________________________________
+|     memory compo |     code           | 
+|__________________|____________________| 
+|                  |                    | 
+|                  |                    | 
+|      variables   |    >               | 
+|   and func       |    >               | 
+|     are stored   |    >               | 
+|    key-value     |                    | 
+|     pairs        |                    | 
+|                  |                    | 
+|                  |                    | 
+|                  |                    | 
+|                  |                    | 
+|__________________|____________________|
+        |                       |
+        |                       |
+        |                       |
+     variable               thread
+     environment           of execution
+
+Javascript is synchronous single-threaded language
+single-threaded-->can execute single command at a time
+synchronous-->proper order follows
+when func is invoked a whole new execution context is created
+{
+        JS sort an array in lexographical order
+}
+to manage creation,deletion of execution context stack is managed which is known as call stack
+Everytime a GEC(global exe context) is placed at end of stack when whole program is executed the stack gets empty & GEC gets pop out
+{
+        Call stack maintainsthe order of execution of execution contexts
+}
+Call stack === Execution stack === Program stack === Control stack === Runtime stack === Machine stack

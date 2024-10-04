@@ -30,7 +30,9 @@ public:
         {
             if (s[i] != '*' && !deleted[i])
                 res += s[i];
+
         }
         return res;
     }
+
 };

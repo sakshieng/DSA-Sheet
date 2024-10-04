@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-//sakshi codes here
+//https://www.geeksforgeeks.org/problems/count-of-distinct-substrings/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
 using namespace std;
 // https://www.codingninjas.com/studio/problems/count-distinct-substrings_985292?leftPanelTab=1
 #include<bits/stdc++.h>
@@ -33,4 +33,8 @@ int countDistinctSubstrings(string &s)
         }
     }
     return cnt+1;//+1 for empty str
+}
+int matrixSum(vector<vector<int>>& nums) {
+    int n = nums.size(),m = nums[0].size();
+    
 }

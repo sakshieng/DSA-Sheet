@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+// https://leetcode.com/problems/target-sum/description/
 // dp on subsequences/subsets 2 ways either assign + - to given number
 // subsequences->contiguous/non-contiguous part of array
 

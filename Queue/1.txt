@@ -27,12 +27,3 @@ priority queue(heap)
 -M%N=(N-M)%N
 
 Recursion takes auxiliary space hence iterative approach is best
-
-/
-/
-/
-for priority queue refer to trees folder heap
-/
-/
-/ 
- 

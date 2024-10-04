@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/first-missing-positive/description/
-class Solution {
+class cyclisSort {
     public int firstMissingPositive(int[] nums) {
           int i = 0;
         while(i < nums.length) {
@@ -13,7 +13,6 @@ class Solution {
                 i++;
             }
         }
-        int count = 0;
         for(int j = 0; j < nums.length; j++) {
             if(nums[j] != j + 1) {
                 return j + 1;

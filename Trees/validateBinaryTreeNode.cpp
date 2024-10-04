@@ -1,50 +1,55 @@
 #include <bits/stdc++.h>
 // https://leetcode.com/problems/validate-binary-tree-nodes/?envType=daily-question&envId=2023-10-17
 using namespace std;
+  
 
-class Solution
-{
+class Solution {
 public:
-    bool validateBinaryTreeNodes(int n, std::vector<int> &leftChild, std::vector<int> &rightChild)
-    {
-        vector<int> inDegree(n, 0);
-
-        for (int i = 0; i < n; i++)
-        {
-            if (leftChild[i] != -1)
-                inDegree[leftChild[i]]++;
-            if (rightChild[i] != -1)
-                inDegree[rightChild[i]]++;
-        }
-
-        int rootCount = -1;
-        for (int i = 0; i < n; i++)
-        {
-            if (inDegree[i] == 0)
-            {
-                if (rootCount == -1)
-                    rootCount = i;
-                else
-                    return false; // More than one root node
+    bool validateBinaryTreeNodes(int n, vector<int>& leftChild, vector<int>& rightChild) {
+        vector<int> adj[n];
+        vector<int> indegree(n, 0);
+        
+        for (int i = 0; i < n; i++) {
+            if (leftChild[i] != -1) {
+                indegree[leftChild[i]]++;
+                adj[i].push_back(leftChild[i]);
+            }
+            if (rightChild[i] != -1) {
+                indegree[rightChild[i]]++;
+                adj[i].push_back(rightChild[i]);
             }
         }
-        if (rootCount == -1)
-            return 0;
-        vector<bool> vis(n, 0);
-        queue<int> q;
-        q.push(rootCount);
-        while (!q.empty())
-        {
-            int node = q.front();
-            q.pop();
-            if (vis[node])
-                return 0;
-            vis[node] = 1;
-            if (leftChild[node] != -1)
-                q.push(leftChild[node]);
-            if (rightChild[node] != -1)
-                q.push(rightChild[node]);
+        
+        // Find the root indegree 0 exactly one root
+        int x = -1;
+        for(int i = 0; i < n; ++i){
+            if(indegree[i] == 0 and x == -1){
+                x = i;
+            }else if(indegree[i] == 0) return false;
         }
-        return accumulate(vis.begin(), vis.end(), 0) == n;
+        if (x == -1) return false; // No root found
+
+        vector<int> vis(n, 0);
+        
+        function<bool(int)> dfs = [&](int u) -> bool{
+            vis[u] = 1;
+            for(auto &it:adj[u]){
+                if(!vis[it])
+                {
+                    if(!dfs(it))
+                        return 0;
+                }else
+                    return 0;
+            }
+            return 1;
+        };
+        if(!dfs(x)) return 0; // Cycle detected
+        
+        // Ensure all nodes are visited
+        for (int i = 0; i < n; i++) {
+            if (!vis[i]) return false; // Unvisited node found
+        }
+        
+        return true;
     }
 };

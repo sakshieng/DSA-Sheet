@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 // https://leetcode.com/problems/number-of-islands/description/
-
+// https://www.naukri.com/code360/problems/number-of-islands_845181?leftPanelTabValue=PROBLEM
 class Solution
 {
 public:
@@ -42,6 +42,7 @@ public:
         return island;
     }
 };
+ 
 /*
 void dfs(vector<vector<char>>& grid,int i,int j){
         if(i<0 || j<0 || i>=grid.size()|| j>=grid[0].size()) return;
@@ -73,3 +74,5 @@ void dfs(vector<vector<char>>& grid,int i,int j){
 };
 
 */
+
+

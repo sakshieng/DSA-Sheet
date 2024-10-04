@@ -109,4 +109,23 @@ public:
         postOrder(root,arr,0);
         return;
     }
+    //https://www.geeksforgeeks.org/problems/check-if-subtree/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article
+    bool isSame(Node* a,Node* b){
+        if(a == nullptr && b == nullptr)
+            return 1;
+        if(a == nullptr || b == nullptr)
+            return 0;
+        return isSame(a->left,b->left) && isSame(a->right,b->right) && (a->data == b->data);
+    }
+    bool isSubTree(Node* t, Node* s) 
+    {
+        //s is present in subtree t or not
+        if(s == nullptr)
+            return 1;
+        if(t == nullptr)
+            return 0;
+        if(isSame(t,s))
+            return 1;
+        return isSubTree(t->left,s) || isSubTree(t->right,s);
+    }
 };

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/find-consecutive-integers-from-a-data-stream/description/
 #include<bits/stdc++.h>
-//sakshi codes here
+//we can use map 
 using namespace std;
 
 class DataStream {

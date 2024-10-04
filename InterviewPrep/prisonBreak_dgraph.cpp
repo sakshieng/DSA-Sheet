@@ -1,10 +1,7 @@
 // https://leetcode.com/problems/maximize-area-of-square-hole-in-grid/description/
 // this won't work
 // https://maang.in/mocks/attempts/2302?problem_id=201
-#include <bits/stdc++.h>
-// sakshi codes here
-using namespace std;
-#define ll long long
+
 
 // https://leetcode.com/problems/maximize-area-of-square-hole-in-grid/description/
 // this won't work

@@ -18,11 +18,9 @@ int main() {
         for (long long j = 1; j <= m; j++)
         {
             cin>>arr[i][j];
-            
             arr[i][j] = arr[i][j] + arr[i-1][j] + arr[i][j-1] - arr[i-1][j-1];
         }
     }
-    
     
     while(q--) {
         int a, b, c, d;

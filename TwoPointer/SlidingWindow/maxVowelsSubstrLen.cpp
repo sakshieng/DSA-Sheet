@@ -36,3 +36,17 @@ iii -> 3
 continue end
 
 */
+void fun(int *p) 
+{ 
+  int q = 10; 
+  p = &q; 
+}     
+  
+int main() 
+{ 
+  int r = 20; 
+  int *p = &r; 
+  fun(p); 
+  cout<<*p;
+  return 0; 
+}

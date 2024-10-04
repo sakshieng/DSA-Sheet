@@ -37,7 +37,7 @@ void enqueue(queue *q, int item)
     {
         return;
     }
-    q->rear = (q->rear + 1) % q->capacity;
+    q->rear = (q->rear + 1) % (q->capacity);
     q->arr[q->rear] = item;
     q->size = q->size + 1;
     cout << item << " enqueued" << endl;
@@ -50,7 +50,7 @@ int dequeue(queue *q)
         return INT8_MIN;
     }
     int item = q->arr[q->front];
-    q->front = (q->front + 1) % q->capacity;
+    q->front = (q->front + 1) % (q->capacity);
     q->size = q->size - 1;
     return item;
 }
