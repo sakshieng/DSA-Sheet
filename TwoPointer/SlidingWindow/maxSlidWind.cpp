@@ -23,9 +23,27 @@ public:
         }
         return ans;
     }
+    vector<int>wind(vector<int>& nums, int k){
+        int n = nums.size();
+        vector<int>ans;
+        //use pair pq first will track elmt & second track idx of elmt
+        priority_queue<pair<int,int>>pq;
+        //if elmt is part of window? then its max or else it needs to be popped
+        int i=0,j=0;
+        while (j < n)
+        {
+            pq.push({nums[j],j});
+            if(j-i+1 == k){
+                while (!pq.empty() && pq.top().second < i)
+                {
+                    //second is toh idx
+                    pq.pop();
+                }
+                ans.push_back(pq.top().first);
+                i++;
+            }
+            j++;
+        }
+        return ans;
+    }
 };
-int main()
-{
-   
-   return 0;
-}

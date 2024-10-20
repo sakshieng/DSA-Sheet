@@ -6,50 +6,35 @@ using namespace std;
 class Solution
 {
 public:
-    int binarySearch(vector<pair<int, pair<int, int>>> &jobs, int idx)
+    const static int n = 5e4 + 10;
+    int dp[n];
+    int solve(int idx, vector<pair<pair<int, int>, int>> &p)
     {
-        int low = 0, high = idx - 1;
-        while (low <= high)
-        {
-            int mid = low + (high - low) / 2;
-            if (jobs[mid].first <= jobs[idx].second.first)
-            {
-                if (jobs[mid + 1].first <= jobs[idx].second.first)
-                    low = mid + 1;
-                else
-                    return mid;
-            }
-            else
-            {
-                high = mid - 1;
-            }
-        }
-        return -1;
+        if (idx >= p.size())
+            return 0;
+        if (dp[idx] != -1)
+            return dp[idx];
+
+        int start = p[idx].first.first;
+        int end = p[idx].first.second;
+        int profit = p[idx].second;
+        int nextIdx = lower_bound(p.begin(), p.end(), make_pair(make_pair(end, 0), 0)) - p.begin(); // end time cha equal or less idx mhnje apla next idx ahe
+        int pick = profit + solve(nextIdx, p);
+        int nonPick = 0 + solve(idx + 1, p);
+        return dp[idx] = max(pick, nonPick);
     }
     int jobScheduling(vector<int> &startTime, vector<int> &endTime, vector<int> &profit)
     {
-        int n = startTime.size();
-        // vector<tuple<int, int, int>>jobs;
-        vector<pair<int, pair<int, int>>> jobs;
-
-        for (int i = 0; i < n; i++)
+        vector<pair<pair<int, int>, int>> p;
+        for (int i = 0; i < startTime.size(); i++)
         {
-            jobs.push_back({endTime[i], {startTime[i], profit[i]}});
+            p.push_back({{startTime[i], endTime[i]}, profit[i]});
         }
-        sort(begin(jobs), end(jobs));
-        vector<int> dp(n, 0);
-        dp[0] = jobs[0].second.second;
-        for (int i = 1; i < n; i++)
-        {
-            int currentProfit = jobs[i].second.second;
-//// Find the latest job that finishes before the current job starts using binary search
-            int prevIdx = binarySearch(jobs, i);
 
-            if (prevIdx != -1)
-                currentProfit += dp[prevIdx];
+        memset(dp, -1, sizeof(dp));
+        // we are inserting profit also in vec because we need to sort that with given start & end
+        sort(begin(p), end(p));
 
-            dp[i] = max(dp[i - 1], currentProfit);
-        }
-        return dp[n-1];
+        return solve(0, p);
     }
 };

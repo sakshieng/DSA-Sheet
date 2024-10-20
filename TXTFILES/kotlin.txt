@@ -1,4 +1,4 @@
-kotlin is statically tyed language we are using it as primary development language for android
+kotlin is statically typed language we are using it as primary development language for android
 // fun main() {
 //     val num=1
 //     if(num<4)

@@ -22,10 +22,6 @@ Process consists:
 
 
 {
-    data stores global variables
-    heap stores local variables
-}
-{
     A shell is a program that acts as an interface betn a user and the kernel
     A Kernel is interface betn application and hardware
     An OS is interface between user and hardware
@@ -113,7 +109,7 @@ usermod -a -G [groupname][username]-->to change a user secondary group
 
 
 _______File permission commands________
-chown-->
+chown-->change file ownership
 chmod-->(sudo chmod g+w [name of file]) we are changed permissions of file to like we added write 
         (sudo chmod a+x [name of file]) a for all got x
 risky command-->chmod 777
@@ -346,10 +342,7 @@ The None keyword is used to define a null value, or no value at all.
 None is not the same as 0, False, or an empty string. 
 None is a data type of its own (NoneType).
 
-In Python 3, there is effectively no limit to how
- long an integer value can be. 
-
-float
+In Python 3, there is effectively no limit to how long an integer value can be. 
 
 Complex numbers are specified as <real part>+<imaginary part>j.
 
@@ -438,13 +431,6 @@ for key,value in items:
 	print(f"{key}:{value}")
 
 
-loops
-
-functions
-positional
-default
-keyword- positional before keyword
-arbitary 
 *args- reveives tuple of args
 **kwargs - dictionary
 f(state="vhvh",graph="hkj")

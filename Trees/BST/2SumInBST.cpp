@@ -55,6 +55,36 @@ public:
 class Solution
 {
 public:
+//tree is BST so if k is even & i^th node val is k/2 then search should continue
+    bool isEven;
+    bool searchSpace(TreeNode* root,int k){
+        if(!root) return;
+        if(root->val == k)
+            return 1;
+        else if(root->val > k)
+                return searchSpace(root->left,k);
+            else
+                return searchSpace(root->right,k);
+    }
+    //by search in BST find k-i^th node val exist
+
+    bool help(TreeNode* root,int &k,TreeNode* ith){
+        if(!ith)
+            return 0;
+            //the claim is used here
+        if(searchSpace(root,k-ith->val) && (!isEven && ith->val == k/2))
+            return 1;
+        return help(root,k,ith->left) || help(root,k,ith->right);
+    } 
+    bool finalFun(TreeNode* root, int target){
+        if(!root)
+            return 0;
+        if(abs(target)%2 & 1)
+            isEven = 1;
+        else 
+            isEven = 0;
+        return help(root,target,root);
+    }
     bool findTarget(TreeNode *root, int k)
     {
         if (!root)

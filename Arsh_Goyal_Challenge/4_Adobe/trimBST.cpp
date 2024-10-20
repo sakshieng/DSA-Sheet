@@ -1,4 +1,5 @@
 //https://leetcode.com/problems/trim-a-binary-search-tree/description/
+//Remove BST keys outside given range
 #include<bits/stdc++.h>
 //sakshi codes here
 using namespace std;

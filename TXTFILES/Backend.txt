@@ -28,7 +28,11 @@ CAP Thoereom (Universal)
 1. C -> Consistency -> Fees Bharne pe turant refresh kiya, fees not paid dikhata hai, 10-15 seconds ke baad karne pe Fees paid dikhata hai !
 2. A -> Availability -> Suppose ek database band pad gaya, uske badle dusra database connect karne me jitna time lagta hai utne time server unavailable hota hai
 3. P -> Partition Tolerance -> Bahut bada data hota hai, usko partition karte hai (logically partition karte hai) 
+{
+    
+A heartbeat -> message is a mechanism that helps us detect failures in a distributed system
 
+}
 # Note : SQL Database madhe Partition Tolerance Kami Aste
          MongoDB Consistency Follow Karto
          MongoDB me single master hai, so Availability nahi

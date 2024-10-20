@@ -1,5 +1,5 @@
 ___________________GRAPHS_______________________
-//https://csacademy.com/lesson/topological_sorting/
+
 Graph is a set of pairs of V,E  it is non-linear DS has edges and vertices
 -->Cycle: a path where the starting point and endpoint are the same vertex
 V-vertices/nodes
@@ -42,7 +42,7 @@ Breadth-First Search (BFS): BFS is not typically used to find articulation bridg
 
 {
     
-Dijkstra's Algorithm: This algorithm is used for finding the shortest path from a single source vertex to all other vertices in a weighted graph. It's not used for finding articulation bridges.
+Dijkstra's Algorithm: This algorithm is used for finding the shortest path from a single source vertex to all other vertices in a weighted graph. It's not used for finding articulation bridges
 
 }
 

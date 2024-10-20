@@ -12,28 +12,29 @@ public:
 //TC O(n) SC O(1)
     const ll inf = 1e18;
     long long minimumCost(string source, string target, vector<char>& original, vector<char>& changed, vector<int>& cost) {
-        vector<vector<ll>>dp(26,vector<ll>(26,inf));
+        vector<vector<ll>>dist(26,vector<ll>(26,inf));
         int n = original.size();
 
         for(int i=0;i<26;++i)//set transformation cost of each char to 0
-            dp[i][i] = 0;
+            dist[i][i] = 0;
 
         for (int i = 0; i < n; i++)
-            dp[original[i]- 'a'][changed[i]-'a'] = min(dp[original[i]- 'a'][changed[i]-'a'],1LL*cost[i]);
+            dist[original[i]- 'a'][changed[i]-'a'] = min(dist[original[i]- 'a'][changed[i]-'a'],1LL*cost[i]);
 
         //to find minimum cost
         for(int k=0;k < 26;++k)
             for(int i=0;i < 26;++i)
                 for(int j=0;j < 26;++j)
-                    dp[i][j] = min(dp[i][j],dp[i][k]+dp[k][j]);
+                    dist[i][j] = min(dist[i][j],dist[i][k]+dist[k][j]);
 
         ll ans = 0;
         for (int i = 0; i < source.length(); i++)
         {
-            ans += dp[source[i]-'a'][target[i]-'a'];
+            ans += dist[source[i]-'a'][target[i]-'a'];
             if(ans >= inf)
                 return -1;
         }
         return ans;
     }
+    
 };

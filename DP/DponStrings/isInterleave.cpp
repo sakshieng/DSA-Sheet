@@ -6,7 +6,7 @@
 // corner hence j=0 in both cases
 // segmentation fault nko mhnun dp=s2.sizeof()+1
 #include <bits/stdc++.h>
-//https://leetcode.com/problems/interleaving-string/
+// https://leetcode.com/problems/interleaving-string/
 using namespace std;
 // 2D VECTOR
 int main()
@@ -36,7 +36,7 @@ int main()
   };
   return 0;
 }
-//updated one 
+// updated one
 /*
 class Solution {
 public:

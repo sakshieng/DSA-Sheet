@@ -1,45 +1,37 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // https://leetcode.com/problems/longest-palindromic-substring/
-//easy approach to check website
-class Solution {
-private: 
-//tabulation
-    bool solve(vector<vector<bool>> &dp, int i, int j, string &s){
-        if(i == j){
-            return dp[i][j] = true;
-        }
-        if(j-i == 1){
-            if(s[i] == s[j]){
-                return dp[i][j] = true;
-            }
-            else{
-                return dp[i][j] = false;
-            }
-        }
-        if(s[i] == s[j] && dp[i+1][j-1] == true){
-            return dp[i][j] = true;
-        } else {
-            return dp[i][j] = false;
-        }
-    }
+// easy approach to check website
+class Solution
+{
 public:
-    string longestPalindrome(string s) {
+    string longestPalindrome(string s)
+    {
         int n = s.size();
-        int startIndex = 0; int maxlen = 0;
-        vector<vector<bool>> dp(n, vector<bool>(n, false));
-        for(int g=0; g<n; g++){
-            for(int i=0, j=g; j<n; i++, j++){
-                solve(dp, i, j, s);
-                if(dp[i][j] == true){
-                    if(j-i+1 > maxlen){
-                        startIndex = i;
-                        maxlen = j-i+1;
-                    }
-                }
+        // func for expand from center
+        auto solve = [&](int l, int r)
+        {
+            while (l >= 0 && r < s.length() && s[l] == s[r])
+            {
+                l--;
+                r++;
+                // cnt++; this time u need a str rather than len
             }
+            return s.substr(l + 1, r - l + 1);
+        };
+
+        string ans = s.substr(0, 1);
+        for (int i = 0; i < n - 1; i++)
+        {
+            string odd = solve(i, i);
+            string even = solve(i, i + 1);
+
+            if (odd.length() > ans.length())
+                ans = odd;
+            if (even.length() > ans.length())
+                ans = even;
         }
-        return s.substr(startIndex, maxlen);
+        return ans;
     }
 };

@@ -159,19 +159,11 @@ Nmap is used to identify and scan systems on network.
 } 
 
 
-https://www.codechef.com/problems/PERMXORSUM?tab=statement
-https://www.codechef.com/COOK143D/submit/XORPERM?tab=statement
-https://leetcode.com/problems/flipping-an-image/discuss/1358902/Two-Pointer-(C%2B%2B)
-https://www.codechef.com/viewsolution/76142475
-https://www.codechef.com/viewsolution/76084469
-https://www.codechef.com/viewsolution/76087737
-https://www.codechef.com/viewsolution/76139510
-https://www.codechef.com/viewsolution/76102777
-https://www.codechef.com/viewsolution/73549378
-https://www.codechef.com/viewsolution/74764138
-https://www.codechef.com/viewsolution/76076762
-https://www.codechef.com/viewsolution/76084029
-https://www.codechef.com/viewsolution/76142893
+{
+-->throw	Used to manually throw an exception in a Java program. We use the throw keyword to create a new exception object and throw it to the calling method.
+
+-->throws	Used to declare that a method may throw one or more exceptions. We use the throws keyword in the method signature to indicate that the method can throw a specific type of exception. Any code that calls the method must either handle the exception or declare that it can throw the exception as well.
+}
 
 
 
@@ -266,3 +258,32 @@ Low pass channel or medium with bandwidth that starts from zero.
 
 Band pass channel has bandwidth that does not start from zero.
 
+
+        3
+    2        4
+1       5  6    7
+    pre-->  3 2 1 5 4 6 7
+
+            3
+        2      4
+    1              6
+5                      7
+    pre-->  3 2 1 5 4 6 7    
+
+           3
+        2      4
+    1              6
+        5              7
+     pre--> 3 2 1 5 4 6 7   
+     
+Tree is a special type of graphs
+6
+
+For a binary search tree (BST) the inorder traversal is always in ascending order
+
+{
+    A tree is an undirected, connected and acyclic graph it does not contain even a single cycle
+}
+{
+    A forest is an undirected, disconnected, acyclic graph i.e. tree is a disjoint collection of trees
+}

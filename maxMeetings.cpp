@@ -42,11 +42,7 @@ public:
         return cnt;
     }
 };
-int main()
-{
-   
-   return 0;
-}
+
 /*
 factorial knapsack 
            thief

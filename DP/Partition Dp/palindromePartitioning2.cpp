@@ -15,6 +15,7 @@ front partition
 #include <bits/stdc++.h>
 // https://www.codingninjas.com/studio/problems/palindrome-partitioning_873266?leftPanelTab=0
 // https://leetcode.com/problems/palindrome-partitioning-ii/
+// https://www.geeksforgeeks.org/problems/palindromic-patitioning4845/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article
 using namespace std;
 
 class Solution
